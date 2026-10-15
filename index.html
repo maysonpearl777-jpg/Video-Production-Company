@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sage & Frame Studio | Midwest Film & Video Production</title>
+
+    <style>
+        :root {
+            --lavender: #E3DADE;
+            --sky: #D0DBE7;
+            --mauve: #D8959B;
+            --sage: #829672;
+            --evergreen: #344C3D;
+            --cream: #FAF9F6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--evergreen);
+            background-color: var(--cream);
+        }
+
+        .notice {
+            background-color: var(--evergreen);
+            color: white;
+            text-align: center;
+            padding: 11px 20px;
+            font-size: 12px;
+            letter-spacing: .3px;
+        }
+
+        nav {
+            background-color: var(--cream);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 7%;
+            border-bottom: 1px solid var(--lavender);
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            letter-spacing: 2px;
+            color: var(--evergreen);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--evergreen);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--mauve);
+        }
+
+        .hero {
+            min-height: 620px;
+            background-color: var(--lavender);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: 72px;
+            line-height: 1.05;
+            margin: 10px 0 25px;
+            letter-spacing: 2px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-style: italic;
+            margin: 0 0 25px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: 0 auto 35px;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--evergreen);
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .button:hover {
+            background-color: var(--sage);
+        }
+
+        main {
+            width: 100%;
+        }
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 100px 25px;
+        }
+
+        .intro h2 {
+            font-size: 42px;
+            margin: 10px 0 20px;
+        }
+
+        .intro p {
+            font-size: 17px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .service {
+            min-height: 430px;
+            padding: 65px 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service:nth-child(1) {
+            background-color: var(--sky);
+        }
+
+        .service:nth-child(2) {
+            background-color: var(--mauve);
+        }
+
+        .service:nth-child(3) {
+            background-color: var(--sage);
+            color: white;
+        }
+
+        .service-number {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+        }
+
+        .service h3 {
+            font-size: 35px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .service a {
+            color: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .about {
+            padding: 110px 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-block {
+            background-color: var(--lavender);
+            padding: 70px;
+            border-radius: 160px 160px 10px 10px;
+            min-height: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 43px;
+            margin: 0 0 20px;
+        }
+
+        .team h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .team-member {
+            border-bottom: 1px solid var(--sage);
+            padding: 18px 0;
+        }
+
+        .team-member strong {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .statement {
+            background-color: var(--sky);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .statement h2 {
+            font-size: 48px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.25;
+        }
+
+        footer {
+            background-color: var(--evergreen);
+            color: white;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .footer-content h2 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin: 0 0 15px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        footer .notice {
+            border-top: 1px solid rgba(255,255,255,.25);
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                margin: 7px 10px;
+                display: inline-block;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .service {
+                min-height: 350px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                padding: 70px 20px;
+            }
+
+            .about-block {
+                padding: 60px 30px;
+            }
+
+            .statement h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="notice">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
+
+    <nav>
+        <a class="logo" href="index.html">SAGE & FRAME</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="video-production.html">Film & Video</a>
+            <a href="film-jobs.html">Careers</a>
+            <a href="wedding-video.html">Weddings</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">Midwest Film + Creative Studio</div>
+
+            <h1>Sage & Frame</h1>
+
+            <h2>Stories worth framing.</h2>
+
+            <p>
+                A Midwest production studio creating thoughtful films,
+                memorable campaigns, and cinematic wedding stories for
+                people and brands with something worth saying.
+            </p>
+
+            <a class="button" href="video-production.html">
+                Explore Our Work
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <div class="eyebrow">What We Create</div>
+
+            <h2>Creative storytelling, made in the Midwest.</h2>
+
+            <p>
+                Based in Iowa City, Sage & Frame Studio brings together
+                filmmakers, producers, editors, and visual storytellers.
+                We believe beautiful filmmaking should feel intentional,
+                personal, and connected to the people behind the story.
+            </p>
+
+        </section>
+
+        <section class="services">
+
+            <div class="service">
+
+                <div>
+                    <span class="service-number">01</span>
+
+                    <h3>Film & Video Production</h3>
+
+                    <p>
+                        Commercials, brand films, social campaigns, music
+                        videos, and independent productions created from
+                        concept through final edit.
+                    </p>
+                </div>
+
+                <a href="video-production.html">
+                    Discover Film & Video →
+                </a>
+
+            </div>
+
+            <div class="service">
+
+                <div>
+                    <span class="service-number">02</span>
+
+                    <h3>Creative Careers</h3>
+
+                    <p>
+                        Opportunities for emerging filmmakers, production
+                        assistants, editors, cinematographers, and creative
+                        professionals throughout the Midwest.
+                    </p>
+                </div>
+
+                <a href="film-jobs.html">
+                    Explore Careers →
+                </a>
+
+            </div>
+
+            <div class="service">
+
+                <div>
+                    <span class="service-number">03</span>
+
+                    <h3>Wedding Films</h3>
+
+                    <p>
+                        Documentary-inspired wedding films focused on
+                        genuine moments, beautiful details, and the people
+                        who make your celebration unforgettable.
+                    </p>
+                </div>
+
+                <a href="wedding-video.html">
+                    View Weddings →
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="about">
+
+            <div class="about-block">
+
+                <div class="eyebrow">Our Philosophy</div>
+
+                <h2>Made with intention.</h2>
+
+                <p>
+                    We approach every project with curiosity and purpose.
+                    Instead of simply creating content, we look for the
+                    details, personalities, and moments that make each
+                    story different.
+                </p>
+
+            </div>
+
+            <div class="team">
+
+                <div class="eyebrow">The Studio</div>
+
+                <h2>Meet the storytellers.</h2>
+
+                <div class="team-member">
+                    <strong>Maya Bennett</strong><br>
+                    Founder + Creative Director
+                </div>
+
+                <div class="team-member">
+                    <strong>Theo Ramirez</strong><br>
+                    Director of Photography
+                </div>
+
+                <div class="team-member">
+                    <strong>Lauren Hayes</strong><br>
+                    Producer
+                </div>
+
+                <div class="team-member">
+                    <strong>Jordan Brooks</strong><br>
+                    Editor + Motion Designer
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="statement">
+
+            <div class="eyebrow">Our Point of View</div>
+
+            <h2>
+                You don't have to leave the Midwest to make something beautiful.
+            </h2>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>SAGE & FRAME</h2>
+
+            <p>Iowa City, Iowa</p>
+
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="video-production.html">Film & Video</a>
+                <a href="film-jobs.html">Careers</a>
+                <a href="wedding-video.html">Weddings</a>
+            </div>
+
+        </div>
+
+        <div class="notice">
+            This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+        </div>
+
+    </footer>
+
+</body>
+</html>
