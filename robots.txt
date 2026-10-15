@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maysonpearl777-jpg.github.io/Video-Production-Company/sitemap.xml
