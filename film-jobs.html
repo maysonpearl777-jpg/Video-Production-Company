@@ -9,7 +9,7 @@
 <title>Film Production Jobs Near Me | Sage & Frame Studio</title>
 
 <meta name="description"
-content="Explore fictional film production jobs, internships, and creative opportunities at Sage & Frame Studio in Iowa City and throughout the Midwest.">
+content="Explore fictional film production jobs, internships, creative professionals, and opportunities at Sage & Frame Studio in Iowa City and throughout the Midwest.">
 
 <style>
 
@@ -22,7 +22,9 @@ content="Explore fictional film production jobs, internships, and creative oppor
     --cream: #FAF9F6;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -68,10 +70,12 @@ nav {
     color: var(--mauve);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: Georgia, "Times New Roman", serif;
     font-weight: normal;
 }
+
+/* HERO */
 
 .hero {
     background: var(--mauve);
@@ -104,6 +108,8 @@ main {
     padding: 90px 25px;
 }
 
+/* INTRO */
+
 .intro {
     max-width: 750px;
     margin-bottom: 80px;
@@ -112,6 +118,8 @@ main {
 .intro h2 {
     font-size: 42px;
 }
+
+/* JOB LISTINGS */
 
 .jobs {
     display: grid;
@@ -149,6 +157,232 @@ main {
     font-size: 11px;
 }
 
+/* CREATIVE TEAM */
+
+.team-section {
+    margin-top: 100px;
+    padding-top: 70px;
+    border-top: 1px solid rgba(52, 76, 61, .25);
+}
+
+.team-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+.team-heading h2 {
+    font-size: 46px;
+    margin: 10px 0 15px;
+}
+
+.role-group {
+    margin-bottom: 70px;
+}
+
+.role-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(52, 76, 61, .35);
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.person {
+    padding: 32px;
+    background: white;
+    border: 1px solid rgba(52, 76, 61, .12);
+}
+
+.person:nth-child(even) {
+    background: var(--lavender);
+}
+
+.person-header {
+    margin-bottom: 18px;
+}
+
+.person h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.person-role {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    color: var(--mauve);
+    font-weight: bold;
+}
+
+.person p {
+    margin-top: 10px;
+}
+
+/* SELECTED WORKS */
+
+.selected-label {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.work-card {
+    min-height: 180px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.work-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(20, 30, 24, .88),
+        rgba(20, 30, 24, .08)
+    );
+}
+
+.work-card span {
+    position: relative;
+    z-index: 1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+/* FICTIONAL FILM POSTERS */
+
+.poster-1 {
+    background: linear-gradient(
+        160deg,
+        #D8959B 0 42%,
+        #344C3D 43% 100%
+    );
+}
+
+.poster-2 {
+    background: linear-gradient(
+        25deg,
+        #344C3D 0 35%,
+        #D0DBE7 36% 68%,
+        #829672 69%
+    );
+}
+
+.poster-3 {
+    background: linear-gradient(
+        145deg,
+        #E3DADE 0 30%,
+        #D8959B 31% 58%,
+        #344C3D 59%
+    );
+}
+
+.poster-4 {
+    background: linear-gradient(
+        180deg,
+        #D0DBE7 0 48%,
+        #344C3D 49%
+    );
+}
+
+.poster-5 {
+    background: linear-gradient(
+        45deg,
+        #829672 0 45%,
+        #D8959B 46% 65%,
+        #344C3D 66%
+    );
+}
+
+.poster-6 {
+    background: linear-gradient(
+        135deg,
+        #344C3D 0 45%,
+        #E3DADE 46% 70%,
+        #D8959B 71%
+    );
+}
+
+.poster-7 {
+    background: linear-gradient(
+        165deg,
+        #D8959B 0 30%,
+        #D0DBE7 31% 60%,
+        #344C3D 61%
+    );
+}
+
+.poster-8 {
+    background: linear-gradient(
+        20deg,
+        #344C3D 0 48%,
+        #829672 49% 70%,
+        #FAF9F6 71%
+    );
+}
+
+.poster-9 {
+    background: linear-gradient(
+        145deg,
+        #D0DBE7 0 38%,
+        #829672 39% 65%,
+        #344C3D 66%
+    );
+}
+
+.poster-10 {
+    background: linear-gradient(
+        180deg,
+        #829672 0 35%,
+        #344C3D 36% 75%,
+        #D8959B 76%
+    );
+}
+
+.poster-11 {
+    background: linear-gradient(
+        45deg,
+        #E3DADE 0 40%,
+        #344C3D 41% 75%,
+        #D8959B 76%
+    );
+}
+
+.poster-12 {
+    background: linear-gradient(
+        155deg,
+        #344C3D 0 40%,
+        #D0DBE7 41% 67%,
+        #829672 68%
+    );
+}
+
+/* INTERNSHIPS */
+
 .internships {
     background: var(--evergreen);
     color: white;
@@ -160,6 +394,8 @@ main {
     font-size: 40px;
 }
 
+/* CAREER MESSAGE */
+
 .career-message {
     text-align: center;
     padding: 100px 20px 30px;
@@ -170,6 +406,8 @@ main {
     max-width: 700px;
     margin: 20px auto;
 }
+
+/* FOOTER */
 
 footer {
     background: var(--evergreen);
@@ -189,8 +427,10 @@ footer {
 }
 
 footer .notice {
-    border-top: 1px solid rgba(255,255,255,.25);
+    border-top: 1px solid rgba(255, 255, 255, .25);
 }
+
+/* MOBILE */
 
 @media (max-width: 750px) {
 
@@ -221,8 +461,36 @@ footer .notice {
         gap: 10px;
     }
 
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work-card {
+        min-height: 150px;
+        padding: 10px;
+    }
+
+    .work-card span {
+        font-size: 14px;
+    }
+
     .internships {
         padding: 45px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .works {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        min-height: 125px;
     }
 }
 
@@ -283,6 +551,9 @@ people who care about visual storytelling and collaborative work.
 
 </section>
 
+
+<!-- JOB OPENINGS -->
+
 <section class="jobs">
 
 <div class="job">
@@ -293,6 +564,7 @@ people who care about visual storytelling and collaborative work.
 </div>
 
 <div>
+
 <p>
 Assist our crew with equipment, set preparation, schedules, talent,
 and day-to-day production needs.
@@ -302,9 +574,11 @@ and day-to-day production needs.
 This role is designed for emerging filmmakers who want hands-on
 experience working on professional productions.
 </p>
+
 </div>
 
 </div>
+
 
 <div class="job">
 
@@ -314,6 +588,7 @@ experience working on professional productions.
 </div>
 
 <div>
+
 <p>
 Work with our post-production team to organize footage, prepare
 project files, edit short-form content, and assist with client projects.
@@ -323,9 +598,11 @@ project files, edit short-form content, and assist with client projects.
 Experience with professional editing software and a strong sense
 of visual storytelling are preferred.
 </p>
+
 </div>
 
 </div>
+
 
 <div class="job">
 
@@ -335,6 +612,7 @@ of visual storytelling are preferred.
 </div>
 
 <div>
+
 <p>
 Join our network of freelance cinematographers for commercial,
 documentary, wedding, and narrative productions throughout Iowa
@@ -345,11 +623,357 @@ and neighboring states.
 Applicants should have professional camera experience and a
 portfolio demonstrating strong composition and lighting skills.
 </p>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- CREATIVE TEAM -->
+
+<section class="team-section">
+
+<div class="team-heading">
+
+<div class="eyebrow">Our Creative Team</div>
+
+<h2>Meet the people behind the frame.</h2>
+
+<p>
+Our fictional roster brings together directors, producers,
+cinematographers, and editors with different approaches to storytelling.
+Explore their individual styles and a selection of the fictional films
+that define their work.
+</p>
+
+</div>
+
+
+<!-- DIRECTORS -->
+
+<div class="role-group">
+
+<h3 class="role-title">Directors</h3>
+
+<div class="people-grid">
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Director</div>
+<h3>Mara Ellis</h3>
+</div>
+
+<p>
+Mara is known for intimate, character-driven stories, naturalistic
+performances, and quiet Midwestern landscapes. Her films often explore
+memory, family, and the relationship between people and place.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-1">
+<span>Harvest Moon</span>
+</div>
+
+<div class="work-card poster-2">
+<span>After the Thaw</span>
+</div>
+
+<div class="work-card poster-3">
+<span>County Line</span>
+</div>
+
+</div>
+
+</article>
+
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Director</div>
+<h3>Julian Cross</h3>
+</div>
+
+<p>
+Julian creates visually bold, emotionally driven narratives that combine
+realism with stylized imagery. His work frequently explores identity,
+change, and the people who shape a place.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-4">
+<span>Wayside</span>
+</div>
+
+<div class="work-card poster-5">
+<span>The Other Shore</span>
+</div>
+
+<div class="work-card poster-6">
+<span>Midwest Forever</span>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCERS -->
+
+<div class="role-group">
+
+<h3 class="role-title">Producers</h3>
+
+<div class="people-grid">
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Producer</div>
+<h3>Lena Hart</h3>
+</div>
+
+<p>
+Lena brings projects to life through thoughtful planning, creative
+collaboration, and a deep focus on meaningful, people-centered stories.
+She specializes in balancing ambitious ideas with practical production.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-7">
+<span>Small Towns</span>
+</div>
+
+<div class="work-card poster-8">
+<span>Still Here</span>
+</div>
+
+<div class="work-card poster-9">
+<span>Common Ground</span>
+</div>
+
+</div>
+
+</article>
+
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Producer</div>
+<h3>Theo Bennett</h3>
+</div>
+
+<p>
+Theo specializes in commercial and documentary production with a focus
+on authentic storytelling, strong visuals, and creative problem solving.
+He enjoys working with brands, nonprofits, and emerging filmmakers.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-10">
+<span>The Road Ahead</span>
+</div>
+
+<div class="work-card poster-11">
+<span>Between Seasons</span>
+</div>
+
+<div class="work-card poster-12">
+<span>Lighter Days</span>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+
+<!-- CINEMATOGRAPHERS -->
+
+<div class="role-group">
+
+<h3 class="role-title">Cinematographers</h3>
+
+<div class="people-grid">
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Cinematographer</div>
+<h3>Nora Vale</h3>
+</div>
+
+<p>
+Nora is drawn to natural light, rich textures, and authentic moments.
+Her cinematography highlights the beauty in everyday scenes and often
+features rural landscapes and small towns throughout the Midwest.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-3">
+<span>Golden Hour</span>
+</div>
+
+<div class="work-card poster-5">
+<span>River People</span>
+</div>
+
+<div class="work-card poster-8">
+<span>Open Fields</span>
+</div>
+
+</div>
+
+</article>
+
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Cinematographer</div>
+<h3>Elias Monroe</h3>
+</div>
+
+<p>
+Elias is known for cinematic, high-contrast visuals and dynamic camera
+movement. His work often explores the intersection of people, place,
+and motion, from urban environments to rural landscapes.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-4">
+<span>Northbound</span>
+</div>
+
+<div class="work-card poster-7">
+<span>City Lights</span>
+</div>
+
+<div class="work-card poster-1">
+<span>Last Light</span>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+
+<!-- EDITORS -->
+
+<div class="role-group">
+
+<h3 class="role-title">Editors</h3>
+
+<div class="people-grid">
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Editor</div>
+<h3>Camille Reed</h3>
+</div>
+
+<p>
+Camille brings a thoughtful, detail-oriented approach to post-production.
+She loves shaping stories through rhythm, emotion, and pacing, with a
+focus on documentary, narrative, and brand storytelling.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-6">
+<span>Fragments</span>
+</div>
+
+<div class="work-card poster-2">
+<span>Home Again</span>
+</div>
+
+<div class="work-card poster-10">
+<span>The In Between</span>
+</div>
+
+</div>
+
+</article>
+
+
+<article class="person">
+
+<div class="person-header">
+<div class="person-role">Editor</div>
+<h3>Owen Park</h3>
+</div>
+
+<p>
+Owen is known for clean, cinematic edits and a strong sense of visual
+flow. He enjoys working on commercial campaigns, music videos, and
+short films, finding creative ways to make every story feel fresh.
+</p>
+
+<div class="selected-label">Selected Works</div>
+
+<div class="works">
+
+<div class="work-card poster-11">
+<span>Second Take</span>
+</div>
+
+<div class="work-card poster-9">
+<span>Parallel</span>
+</div>
+
+<div class="work-card poster-12">
+<span>What Stays</span>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNSHIPS -->
 
 <section class="internships">
 
@@ -371,6 +995,9 @@ portfolio or résumé.
 
 </section>
 
+
+<!-- CAREER MESSAGE -->
+
 <section class="career-message">
 
 <div class="eyebrow">Creative Careers</div>
@@ -386,6 +1013,9 @@ Sage & Frame exists to help build that creative community here.
 </section>
 
 </main>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -411,4 +1041,5 @@ This is a fictional website created for educational purposes as part of MKTG:440
 </footer>
 
 </body>
+
 </html>
