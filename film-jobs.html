@@ -167,7 +167,7 @@ main {
 
 .team-heading {
     max-width: 760px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
 }
 
 .team-heading h2 {
@@ -176,7 +176,7 @@ main {
 }
 
 .role-group {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 .role-title {
@@ -185,7 +185,7 @@ main {
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(52, 76, 61, .35);
 }
@@ -196,23 +196,35 @@ main {
     gap: 28px;
 }
 
+/* INDIVIDUAL PROFILE */
+
 .person {
-    padding: 32px;
     background: white;
     border: 1px solid rgba(52, 76, 61, .12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .person:nth-child(even) {
     background: var(--lavender);
 }
 
-.person-header {
-    margin-bottom: 18px;
+/* PROFILE IMAGE */
+
+.profile-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.person h3 {
-    font-size: 30px;
-    margin: 0;
+.person-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .person-role {
@@ -221,10 +233,17 @@ main {
     font-size: 10px;
     color: var(--mauve);
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
-.person p {
-    margin-top: 10px;
+.person h3 {
+    font-size: 31px;
+    margin: 0 0 12px;
+}
+
+.person-description {
+    margin: 0;
+    flex-grow: 1;
 }
 
 /* SELECTED WORKS */
@@ -239,19 +258,17 @@ main {
 .works {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 9px;
 }
 
 .work-card {
-    min-height: 180px;
-    padding: 16px;
+    min-height: 150px;
+    padding: 13px;
     display: flex;
     align-items: flex-end;
     position: relative;
     overflow: hidden;
     color: white;
-    background-size: cover;
-    background-position: center;
 }
 
 .work-card::before {
@@ -261,7 +278,7 @@ main {
     background: linear-gradient(
         to top,
         rgba(20, 30, 24, .88),
-        rgba(20, 30, 24, .08)
+        rgba(20, 30, 24, .05)
     );
 }
 
@@ -269,116 +286,92 @@ main {
     position: relative;
     z-index: 1;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.15;
 }
 
-/* FICTIONAL FILM POSTERS */
+/* FICTIONAL FILM ARTWORK */
 
 .poster-1 {
-    background: linear-gradient(
-        160deg,
+    background: linear-gradient(160deg,
         #D8959B 0 42%,
-        #344C3D 43% 100%
-    );
+        #344C3D 43% 100%);
 }
 
 .poster-2 {
-    background: linear-gradient(
-        25deg,
+    background: linear-gradient(25deg,
         #344C3D 0 35%,
         #D0DBE7 36% 68%,
-        #829672 69%
-    );
+        #829672 69%);
 }
 
 .poster-3 {
-    background: linear-gradient(
-        145deg,
+    background: linear-gradient(145deg,
         #E3DADE 0 30%,
         #D8959B 31% 58%,
-        #344C3D 59%
-    );
+        #344C3D 59%);
 }
 
 .poster-4 {
-    background: linear-gradient(
-        180deg,
+    background: linear-gradient(180deg,
         #D0DBE7 0 48%,
-        #344C3D 49%
-    );
+        #344C3D 49%);
 }
 
 .poster-5 {
-    background: linear-gradient(
-        45deg,
+    background: linear-gradient(45deg,
         #829672 0 45%,
         #D8959B 46% 65%,
-        #344C3D 66%
-    );
+        #344C3D 66%);
 }
 
 .poster-6 {
-    background: linear-gradient(
-        135deg,
+    background: linear-gradient(135deg,
         #344C3D 0 45%,
         #E3DADE 46% 70%,
-        #D8959B 71%
-    );
+        #D8959B 71%);
 }
 
 .poster-7 {
-    background: linear-gradient(
-        165deg,
+    background: linear-gradient(165deg,
         #D8959B 0 30%,
         #D0DBE7 31% 60%,
-        #344C3D 61%
-    );
+        #344C3D 61%);
 }
 
 .poster-8 {
-    background: linear-gradient(
-        20deg,
+    background: linear-gradient(20deg,
         #344C3D 0 48%,
         #829672 49% 70%,
-        #FAF9F6 71%
-    );
+        #FAF9F6 71%);
 }
 
 .poster-9 {
-    background: linear-gradient(
-        145deg,
+    background: linear-gradient(145deg,
         #D0DBE7 0 38%,
         #829672 39% 65%,
-        #344C3D 66%
-    );
+        #344C3D 66%);
 }
 
 .poster-10 {
-    background: linear-gradient(
-        180deg,
+    background: linear-gradient(180deg,
         #829672 0 35%,
         #344C3D 36% 75%,
-        #D8959B 76%
-    );
+        #D8959B 76%);
 }
 
 .poster-11 {
-    background: linear-gradient(
-        45deg,
+    background: linear-gradient(45deg,
         #E3DADE 0 40%,
         #344C3D 41% 75%,
-        #D8959B 76%
-    );
+        #D8959B 76%);
 }
 
 .poster-12 {
-    background: linear-gradient(
-        155deg,
+    background: linear-gradient(155deg,
         #344C3D 0 40%,
         #D0DBE7 41% 67%,
-        #829672 68%
-    );
+        #829672 68%);
 }
 
 /* INTERNSHIPS */
@@ -465,17 +458,8 @@ footer .notice {
         grid-template-columns: 1fr;
     }
 
-    .works {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .work-card {
-        min-height: 150px;
-        padding: 10px;
-    }
-
-    .work-card span {
-        font-size: 14px;
+    .profile-image {
+        height: 430px;
     }
 
     .internships {
@@ -485,12 +469,16 @@ footer .notice {
 
 @media (max-width: 480px) {
 
+    .profile-image {
+        height: 330px;
+    }
+
     .works {
         grid-template-columns: 1fr;
     }
 
     .work-card {
-        min-height: 125px;
+        min-height: 120px;
     }
 }
 
@@ -517,6 +505,7 @@ This is a fictional website created for educational purposes as part of MKTG:440
 
 </nav>
 
+
 <header class="hero">
 
 <div class="hero-content">
@@ -535,7 +524,11 @@ careers without leaving the Midwest.
 
 </header>
 
+
 <main>
+
+
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -659,14 +652,23 @@ that define their work.
 
 <div class="people-grid">
 
+
+<!-- MARA ELLIS -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Director</div>
-<h3>Mara Ellis</h3>
-</div>
+<img
+class="profile-image"
+src="images/mara-ellis.jpg"
+alt="Fictional Sage & Frame director Mara Ellis">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Director</div>
+
+<h3>Mara Ellis</h3>
+
+<p class="person-description">
 Mara is known for intimate, character-driven stories, naturalistic
 performances, and quiet Midwestern landscapes. Her films often explore
 memory, family, and the relationship between people and place.
@@ -690,17 +692,27 @@ memory, family, and the relationship between people and place.
 
 </div>
 
+</div>
+
 </article>
 
 
+<!-- JULIAN CROSS -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Director</div>
-<h3>Julian Cross</h3>
-</div>
+<img
+class="profile-image"
+src="images/julian-cross.png"
+alt="Fictional Sage & Frame director Julian Cross">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Director</div>
+
+<h3>Julian Cross</h3>
+
+<p class="person-description">
 Julian creates visually bold, emotionally driven narratives that combine
 realism with stylized imagery. His work frequently explores identity,
 change, and the people who shape a place.
@@ -724,10 +736,11 @@ change, and the people who shape a place.
 
 </div>
 
+</div>
+
 </article>
 
 </div>
-
 </div>
 
 
@@ -739,14 +752,23 @@ change, and the people who shape a place.
 
 <div class="people-grid">
 
+
+<!-- LENA HART -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Producer</div>
-<h3>Lena Hart</h3>
-</div>
+<img
+class="profile-image"
+src="images/lena-hart.png"
+alt="Fictional Sage & Frame producer Lena Hart">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Producer</div>
+
+<h3>Lena Hart</h3>
+
+<p class="person-description">
 Lena brings projects to life through thoughtful planning, creative
 collaboration, and a deep focus on meaningful, people-centered stories.
 She specializes in balancing ambitious ideas with practical production.
@@ -770,17 +792,27 @@ She specializes in balancing ambitious ideas with practical production.
 
 </div>
 
+</div>
+
 </article>
 
 
+<!-- THEO BENNETT -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Producer</div>
-<h3>Theo Bennett</h3>
-</div>
+<img
+class="profile-image"
+src="images/theo-bennett.png"
+alt="Fictional Sage & Frame producer Theo Bennett">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Producer</div>
+
+<h3>Theo Bennett</h3>
+
+<p class="person-description">
 Theo specializes in commercial and documentary production with a focus
 on authentic storytelling, strong visuals, and creative problem solving.
 He enjoys working with brands, nonprofits, and emerging filmmakers.
@@ -804,10 +836,11 @@ He enjoys working with brands, nonprofits, and emerging filmmakers.
 
 </div>
 
+</div>
+
 </article>
 
 </div>
-
 </div>
 
 
@@ -819,14 +852,23 @@ He enjoys working with brands, nonprofits, and emerging filmmakers.
 
 <div class="people-grid">
 
+
+<!-- NORA VALE -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Cinematographer</div>
-<h3>Nora Vale</h3>
-</div>
+<img
+class="profile-image"
+src="images/nora-vale.png"
+alt="Fictional Sage & Frame cinematographer Nora Vale">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Cinematographer</div>
+
+<h3>Nora Vale</h3>
+
+<p class="person-description">
 Nora is drawn to natural light, rich textures, and authentic moments.
 Her cinematography highlights the beauty in everyday scenes and often
 features rural landscapes and small towns throughout the Midwest.
@@ -850,17 +892,27 @@ features rural landscapes and small towns throughout the Midwest.
 
 </div>
 
+</div>
+
 </article>
 
 
+<!-- ELIAS MONROE -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Cinematographer</div>
-<h3>Elias Monroe</h3>
-</div>
+<img
+class="profile-image"
+src="images/elias-monroe.png"
+alt="Fictional Sage & Frame cinematographer Elias Monroe">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Cinematographer</div>
+
+<h3>Elias Monroe</h3>
+
+<p class="person-description">
 Elias is known for cinematic, high-contrast visuals and dynamic camera
 movement. His work often explores the intersection of people, place,
 and motion, from urban environments to rural landscapes.
@@ -884,10 +936,11 @@ and motion, from urban environments to rural landscapes.
 
 </div>
 
+</div>
+
 </article>
 
 </div>
-
 </div>
 
 
@@ -899,14 +952,23 @@ and motion, from urban environments to rural landscapes.
 
 <div class="people-grid">
 
+
+<!-- CAMILLE REED -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Editor</div>
-<h3>Camille Reed</h3>
-</div>
+<img
+class="profile-image"
+src="images/camille-reed.png"
+alt="Fictional Sage & Frame editor Camille Reed">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Editor</div>
+
+<h3>Camille Reed</h3>
+
+<p class="person-description">
 Camille brings a thoughtful, detail-oriented approach to post-production.
 She loves shaping stories through rhythm, emotion, and pacing, with a
 focus on documentary, narrative, and brand storytelling.
@@ -930,17 +992,27 @@ focus on documentary, narrative, and brand storytelling.
 
 </div>
 
+</div>
+
 </article>
 
 
+<!-- OWEN PARK -->
+
 <article class="person">
 
-<div class="person-header">
-<div class="person-role">Editor</div>
-<h3>Owen Park</h3>
-</div>
+<img
+class="profile-image"
+src="images/owen-park.png"
+alt="Fictional Sage & Frame editor Owen Park">
 
-<p>
+<div class="person-content">
+
+<div class="person-role">Editor</div>
+
+<h3>Owen Park</h3>
+
+<p class="person-description">
 Owen is known for clean, cinematic edits and a strong sense of visual
 flow. He enjoys working on commercial campaigns, music videos, and
 short films, finding creative ways to make every story feel fresh.
@@ -964,10 +1036,11 @@ short films, finding creative ways to make every story feel fresh.
 
 </div>
 
+</div>
+
 </article>
 
 </div>
-
 </div>
 
 </section>
@@ -1015,8 +1088,6 @@ Sage & Frame exists to help build that creative community here.
 </main>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <div class="footer-content">
@@ -1041,5 +1112,4 @@ This is a fictional website created for educational purposes as part of MKTG:440
 </footer>
 
 </body>
-
 </html>
