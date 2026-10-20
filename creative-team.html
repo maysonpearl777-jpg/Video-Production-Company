@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Creative Team | Sage & Frame Studio</title>
+
+    <meta name="description"
+        content="Meet the fictional creative team behind Sage & Frame Studio, a Midwest film and video production company.">
+
+    <style>
+
+        :root {
+            --lavender: #E3DADE;
+            --sky: #D0DBE7;
+            --mauve: #D8959B;
+            --sage: #829672;
+            --evergreen: #344C3D;
+            --cream: #FAF9F6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--evergreen);
+            background-color: var(--cream);
+        }
+
+        /* EDUCATIONAL NOTICE */
+
+        .notice {
+            background-color: var(--evergreen);
+            color: white;
+            text-align: center;
+            padding: 11px 20px;
+            font-size: 12px;
+            letter-spacing: .3px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background-color: var(--cream);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 7%;
+            border-bottom: 1px solid var(--lavender);
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            letter-spacing: 2px;
+            color: var(--evergreen);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--evergreen);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--mauve);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background-color: var(--sky);
+            padding: 105px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            margin: 10px 0 22px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* TEAM */
+
+        .team {
+            padding: 95px 7% 115px;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 55px;
+        }
+
+        .team-intro h2 {
+            font-size: 43px;
+            margin: 8px 0 15px;
+        }
+
+        .team-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .member {
+            background-color: white;
+            border: 1px solid var(--lavender);
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .member img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+            background-color: var(--lavender);
+        }
+
+        .member-info {
+            padding: 22px;
+        }
+
+        .member h3 {
+            font-size: 25px;
+            line-height: 1.15;
+            margin: 0 0 5px;
+        }
+
+        .role {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 11px;
+            color: var(--sage);
+            font-weight: bold;
+        }
+
+        .member p {
+            font-size: 14px;
+            margin: 12px 0 0;
+        }
+
+        /* VALUES */
+
+        .values {
+            background-color: var(--lavender);
+            padding: 90px 7%;
+            text-align: center;
+        }
+
+        .values h2 {
+            font-size: 43px;
+            margin: 8px auto 18px;
+        }
+
+        .values p {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        /* CAREERS CTA */
+
+        .cta {
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin: 8px 0 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--evergreen);
+            color: white;
+            text-decoration: none;
+            padding: 12px 23px;
+            border-radius: 28px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        .button:hover {
+            background-color: var(--sage);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: var(--evergreen);
+            color: white;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .footer-content h2 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin: 0 0 15px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        footer .notice {
+            border-top: 1px solid rgba(255,255,255,.25);
+        }
+
+        /* TABLET */
+
+        @media (max-width: 950px) {
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                margin: 7px 9px;
+                display: inline-block;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .team {
+                padding: 70px 20px;
+            }
+
+        }
+
+        @media (max-width: 560px) {
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- EDUCATIONAL NOTICE -->
+
+    <div class="notice">
+
+        This is a fictional website created for educational purposes as part
+        of MKTG:4400 at the University of Iowa. It is not a real business.
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a class="logo" href="index.html">
+            SAGE & FRAME
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="video-production.html">
+                Film & Video
+            </a>
+
+            <a href="film-jobs.html">
+                Careers
+            </a>
+
+            <a href="creative-team.html">
+                Our Team
+            </a>
+
+            <a href="wedding-video.html">
+                Weddings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="eyebrow">
+            The People Behind the Frame
+        </div>
+
+        <h1>
+            Our Creative Team
+        </h1>
+
+        <p>
+            A fictional collective of filmmakers, producers, editors,
+            photographers, and visual storytellers bringing thoughtful
+            Midwest stories to life.
+        </p>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- TEAM -->
+
+        <section class="team">
+
+            <div class="team-intro">
+
+                <div class="eyebrow">
+                    Meet the Studio
+                </div>
+
+                <h2>
+                    Different perspectives. One shared vision.
+                </h2>
+
+                <p>
+                    Our team blends production experience with curiosity,
+                    collaboration, and a love for intentional storytelling.
+                </p>
+
+            </div>
+
+
+            <div class="team-grid">
+
+
+                <!-- MARA -->
+
+                <article class="member">
+
+                    <img
+                        src="images/mara-ellis.jpg"
+                        alt="Mara Ellis"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Mara Ellis
+                        </h3>
+
+                        <div class="role">
+                            Founder + Creative Director
+                        </div>
+
+                        <p>
+                            Shapes the studio's creative direction and helps
+                            turn early ideas into clear, human-centered
+                            visual stories.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- THEO -->
+
+                <article class="member">
+
+                    <img
+                        src="images/theo-bennett.png"
+                        alt="Theo Bennett"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Theo Bennett
+                        </h3>
+
+                        <div class="role">
+                            Director of Photography
+                        </div>
+
+                        <p>
+                            Builds the visual language of each production
+                            through lighting, composition, camera movement,
+                            and atmosphere.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LENA -->
+
+                <article class="member">
+
+                    <img
+                        src="images/lena-hart.png"
+                        alt="Lena Hart"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Lena Hart
+                        </h3>
+
+                        <div class="role">
+                            Senior Producer
+                        </div>
+
+                        <p>
+                            Keeps productions moving from concept to delivery
+                            while coordinating crews, schedules, locations,
+                            and clients.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JULIAN -->
+
+                <article class="member">
+
+                    <img
+                        src="images/julian-cross.png"
+                        alt="Julian Cross"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Julian Cross
+                        </h3>
+
+                        <div class="role">
+                            Editor + Colorist
+                        </div>
+
+                        <p>
+                            Finds the rhythm of a story in post-production
+                            and gives each film a cohesive, polished
+                            visual finish.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NORA -->
+
+                <article class="member">
+
+                    <img
+                        src="images/nora-vale.png"
+                        alt="Nora Vale"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Nora Vale
+                        </h3>
+
+                        <div class="role">
+                            Production Designer
+                        </div>
+
+                        <p>
+                            Develops sets, props, textures, and visual
+                            details that make each frame feel specific
+                            and lived-in.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ELIAS -->
+
+                <article class="member">
+
+                    <img
+                        src="images/elias-monroe.png"
+                        alt="Elias Monroe"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Elias Monroe
+                        </h3>
+
+                        <div class="role">
+                            Sound + Post Audio
+                        </div>
+
+                        <p>
+                            Captures and shapes dialogue, ambience, and
+                            sound design to give each project a richer
+                            sense of place.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAMILLE -->
+
+                <article class="member">
+
+                    <img
+                        src="images/camille-reed.png"
+                        alt="Camille Reed"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Camille Reed
+                        </h3>
+
+                        <div class="role">
+                            Photographer + Content Producer
+                        </div>
+
+                        <p>
+                            Creates still photography and short-form
+                            content that extends campaign stories beyond
+                            the main film.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OWEN -->
+
+                <article class="member">
+
+                    <img
+                        src="images/owen-park.png"
+                        alt="Owen Park"
+                    >
+
+                    <div class="member-info">
+
+                        <h3>
+                            Owen Park
+                        </h3>
+
+                        <div class="role">
+                            Motion Designer
+                        </div>
+
+                        <p>
+                            Brings typography, graphics, titles, and
+                            animation into the studio's films and
+                            digital campaigns.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW WE WORK -->
+
+        <section class="values">
+
+            <div class="eyebrow">
+                How We Work
+            </div>
+
+            <h2>
+                Collaborative by design.
+            </h2>
+
+            <p>
+                We believe the strongest creative work comes from listening
+                closely, respecting every role on set, and giving good ideas
+                room to grow. Our process is thoughtful, flexible, and
+                grounded in the people behind each story.
+            </p>
+
+        </section>
+
+
+        <!-- CAREERS -->
+
+        <section class="cta">
+
+            <div class="eyebrow">
+                Work With Us
+            </div>
+
+            <h2>
+                Want to join a future project?
+            </h2>
+
+            <p>
+                Explore the fictional openings on our careers page and
+                filter opportunities by location and creative specialty.
+            </p>
+
+            <a
+                class="button"
+                href="film-jobs.html"
+            >
+                Explore Careers
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                SAGE & FRAME
+            </h2>
+
+            <p>
+                Iowa City, Iowa
+            </p>
+
+            <div class="footer-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="video-production.html">
+                    Film & Video
+                </a>
+
+                <a href="film-jobs.html">
+                    Careers
+                </a>
+
+                <a href="creative-team.html">
+                    Our Team
+                </a>
+
+                <a href="wedding-video.html">
+                    Weddings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="notice">
+
+            This is a fictional website created for educational purposes
+            as part of MKTG:4400 at the University of Iowa.
+            It is not a real business.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
