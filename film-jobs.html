@@ -2,1114 +2,1428 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Film Production Jobs Near Me | Sage & Frame Studio</title>
-
-<meta name="description"
-content="Explore fictional film production jobs, internships, creative professionals, and opportunities at Sage & Frame Studio in Iowa City and throughout the Midwest.">
-
-<style>
-
-:root {
-    --lavender: #E3DADE;
-    --sky: #D0DBE7;
-    --mauve: #D8959B;
-    --sage: #829672;
-    --evergreen: #344C3D;
-    --cream: #FAF9F6;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--evergreen);
-    background: var(--cream);
-    line-height: 1.7;
-}
-
-.notice {
-    background: var(--evergreen);
-    color: white;
-    text-align: center;
-    padding: 11px 20px;
-    font-size: 12px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 7%;
-}
-
-.logo {
-    font-family: Georgia, serif;
-    font-size: 23px;
-    letter-spacing: 2px;
-    color: var(--evergreen);
-    text-decoration: none;
-}
-
-.nav-links a {
-    color: var(--evergreen);
-    text-decoration: none;
-    margin-left: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 13px;
-}
-
-.nav-links a:hover {
-    color: var(--mauve);
-}
-
-h1, h2, h3, h4 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-}
-
-/* HERO */
-
-.hero {
-    background: var(--mauve);
-    padding: 120px 8%;
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 12px;
-}
-
-h1 {
-    font-size: 65px;
-    line-height: 1.1;
-}
-
-.hero p {
-    max-width: 650px;
-    font-size: 18px;
-}
-
-main {
-    max-width: 1050px;
-    margin: auto;
-    padding: 90px 25px;
-}
-
-/* INTRO */
-
-.intro {
-    max-width: 750px;
-    margin-bottom: 80px;
-}
-
-.intro h2 {
-    font-size: 42px;
-}
-
-/* JOB LISTINGS */
-
-.jobs {
-    display: grid;
-    gap: 25px;
-}
-
-.job {
-    padding: 45px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-}
-
-.job:nth-child(1) {
-    background: var(--lavender);
-}
-
-.job:nth-child(2) {
-    background: var(--sky);
-}
-
-.job:nth-child(3) {
-    background: var(--sage);
-    color: white;
-}
-
-.job h3 {
-    font-size: 28px;
-    margin-top: 0;
-}
-
-.job-type {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 11px;
-}
-
-/* CREATIVE TEAM */
-
-.team-section {
-    margin-top: 100px;
-    padding-top: 70px;
-    border-top: 1px solid rgba(52, 76, 61, .25);
-}
-
-.team-heading {
-    max-width: 760px;
-    margin-bottom: 60px;
-}
-
-.team-heading h2 {
-    font-size: 46px;
-    margin: 10px 0 15px;
-}
-
-.role-group {
-    margin-bottom: 80px;
-}
-
-.role-title {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(52, 76, 61, .35);
-}
-
-.people-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-}
-
-/* INDIVIDUAL PROFILE */
-
-.person {
-    background: white;
-    border: 1px solid rgba(52, 76, 61, .12);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.person:nth-child(even) {
-    background: var(--lavender);
-}
-
-/* PROFILE IMAGE */
-
-.profile-image {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.person-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.person-role {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 10px;
-    color: var(--mauve);
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.person h3 {
-    font-size: 31px;
-    margin: 0 0 12px;
-}
-
-.person-description {
-    margin: 0;
-    flex-grow: 1;
-}
-
-/* SELECTED WORKS */
-
-.selected-label {
-    margin-top: 28px;
-    margin-bottom: 12px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-}
-
-.works {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 9px;
-}
-
-.work-card {
-    min-height: 150px;
-    padding: 13px;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-    color: white;
-}
-
-.work-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(20, 30, 24, .88),
-        rgba(20, 30, 24, .05)
-    );
-}
-
-.work-card span {
-    position: relative;
-    z-index: 1;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
-    line-height: 1.15;
-}
-
-/* FICTIONAL FILM ARTWORK */
-
-.poster-1 {
-    background: linear-gradient(160deg,
-        #D8959B 0 42%,
-        #344C3D 43% 100%);
-}
-
-.poster-2 {
-    background: linear-gradient(25deg,
-        #344C3D 0 35%,
-        #D0DBE7 36% 68%,
-        #829672 69%);
-}
-
-.poster-3 {
-    background: linear-gradient(145deg,
-        #E3DADE 0 30%,
-        #D8959B 31% 58%,
-        #344C3D 59%);
-}
-
-.poster-4 {
-    background: linear-gradient(180deg,
-        #D0DBE7 0 48%,
-        #344C3D 49%);
-}
-
-.poster-5 {
-    background: linear-gradient(45deg,
-        #829672 0 45%,
-        #D8959B 46% 65%,
-        #344C3D 66%);
-}
-
-.poster-6 {
-    background: linear-gradient(135deg,
-        #344C3D 0 45%,
-        #E3DADE 46% 70%,
-        #D8959B 71%);
-}
-
-.poster-7 {
-    background: linear-gradient(165deg,
-        #D8959B 0 30%,
-        #D0DBE7 31% 60%,
-        #344C3D 61%);
-}
-
-.poster-8 {
-    background: linear-gradient(20deg,
-        #344C3D 0 48%,
-        #829672 49% 70%,
-        #FAF9F6 71%);
-}
-
-.poster-9 {
-    background: linear-gradient(145deg,
-        #D0DBE7 0 38%,
-        #829672 39% 65%,
-        #344C3D 66%);
-}
-
-.poster-10 {
-    background: linear-gradient(180deg,
-        #829672 0 35%,
-        #344C3D 36% 75%,
-        #D8959B 76%);
-}
-
-.poster-11 {
-    background: linear-gradient(45deg,
-        #E3DADE 0 40%,
-        #344C3D 41% 75%,
-        #D8959B 76%);
-}
-
-.poster-12 {
-    background: linear-gradient(155deg,
-        #344C3D 0 40%,
-        #D0DBE7 41% 67%,
-        #829672 68%);
-}
-
-/* INTERNSHIPS */
-
-.internships {
-    background: var(--evergreen);
-    color: white;
-    padding: 70px;
-    margin-top: 90px;
-}
-
-.internships h2 {
-    font-size: 40px;
-}
-
-/* CAREER MESSAGE */
-
-.career-message {
-    text-align: center;
-    padding: 100px 20px 30px;
-}
-
-.career-message h2 {
-    font-size: 45px;
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-/* FOOTER */
-
-footer {
-    background: var(--evergreen);
-    color: white;
-    text-align: center;
-}
-
-.footer-content {
-    padding: 55px 20px;
-}
-
-.footer-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 13px;
-}
-
-footer .notice {
-    border-top: 1px solid rgba(255, 255, 255, .25);
-}
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    .nav-links a {
-        margin: 7px;
-        display: inline-block;
-    }
-
-    h1 {
-        font-size: 45px;
-    }
-
-    .hero {
-        padding: 80px 25px;
-    }
-
-    .job {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .people-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-image {
-        height: 430px;
-    }
-
-    .internships {
-        padding: 45px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .profile-image {
-        height: 330px;
-    }
-
-    .works {
-        grid-template-columns: 1fr;
-    }
-
-    .work-card {
-        min-height: 120px;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Film Production Jobs Near Me | Sage & Frame Studio</title>
+
+    <meta name="description"
+        content="Explore fictional film production jobs, internships, and creative opportunities at Sage & Frame Studio and across the Midwest.">
+
+    <style>
+        :root {
+            --lavender: #E3DADE;
+            --sky: #D0DBE7;
+            --mauve: #D8959B;
+            --sage: #829672;
+            --evergreen: #344C3D;
+            --cream: #FAF9F6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--evergreen);
+            background-color: var(--cream);
+        }
+
+        /* EDUCATIONAL NOTICE */
+
+        .notice {
+            background-color: var(--evergreen);
+            color: white;
+            text-align: center;
+            padding: 11px 20px;
+            font-size: 12px;
+            letter-spacing: .3px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background-color: var(--cream);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 7%;
+            border-bottom: 1px solid var(--lavender);
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            letter-spacing: 2px;
+            color: var(--evergreen);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--evergreen);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--mauve);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background-color: var(--lavender);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 62px;
+            line-height: 1.08;
+            margin: 10px auto 22px;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* JOBS */
+
+        .jobs-section {
+            padding: 85px 7% 110px;
+        }
+
+        .jobs-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 45px;
+        }
+
+        .jobs-header h2 {
+            font-size: 44px;
+            margin: 8px 0 12px;
+        }
+
+        /* SEARCH AND FILTERS */
+
+        .filters {
+            max-width: 1150px;
+            margin: 0 auto 45px;
+            background-color: white;
+            border: 1px solid var(--lavender);
+            padding: 24px;
+            border-radius: 14px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 15px;
+            box-shadow: 0 8px 24px rgba(52, 76, 61, .06);
+        }
+
+        .filters input,
+        .filters select {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #c8cec8;
+            border-radius: 8px;
+            background-color: white;
+            color: var(--evergreen);
+            font-size: 15px;
+        }
+
+        .filters input:focus,
+        .filters select:focus {
+            outline: 2px solid var(--sage);
+            outline-offset: 1px;
+        }
+
+        .result-count {
+            max-width: 1150px;
+            margin: 0 auto 18px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* JOB CARDS */
+
+        .jobs-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .job-card {
+            background-color: white;
+            border: 1px solid var(--lavender);
+            border-radius: 14px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            min-height: 290px;
+        }
+
+        .job-card h3 {
+            font-size: 27px;
+            line-height: 1.2;
+            margin: 8px 0 10px;
+        }
+
+        .job-meta {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--sage);
+            font-weight: bold;
+            margin-bottom: 13px;
+        }
+
+        .job-card p {
+            margin: 0 0 18px;
+        }
+
+        .job-bottom {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: end;
+        }
+
+        .deadline {
+            font-size: 12px;
+            color: #687467;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--evergreen);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background-color: var(--sage);
+        }
+
+        .empty {
+            display: none;
+            text-align: center;
+            max-width: 800px;
+            margin: 45px auto;
+            padding: 35px;
+            background-color: var(--sky);
+            border-radius: 12px;
+        }
+
+        /* TEAM CTA */
+
+        .team-cta {
+            background-color: var(--sky);
+            padding: 85px 20px;
+            text-align: center;
+        }
+
+        .team-cta h2 {
+            font-size: 43px;
+            margin: 8px 0 15px;
+        }
+
+        .team-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: var(--evergreen);
+            color: white;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .footer-content h2 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin: 0 0 15px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        footer .notice {
+            border-top: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                margin: 7px 9px;
+                display: inline-block;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .filters {
+                grid-template-columns: 1fr;
+            }
+
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .jobs-section {
+                padding: 65px 20px;
+            }
+
+            .job-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="notice">
-This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
-</div>
+    <div class="notice">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa.
+        It is not a real business.
+    </div>
 
-<nav>
+    <!-- NAVIGATION -->
 
-<a class="logo" href="index.html">SAGE & FRAME</a>
+    <nav>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="video-production.html">Film & Video</a>
-<a href="film-jobs.html">Careers</a>
-<a href="wedding-video.html">Weddings</a>
-</div>
+        <a class="logo" href="index.html">
+            SAGE & FRAME
+        </a>
 
-</nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="video-production.html">Film & Video</a>
+            <a href="film-jobs.html">Careers</a>
+            <a href="creative-team.html">Our Team</a>
+            <a href="wedding-video.html">Weddings</a>
+        </div>
 
+    </nav>
+
+    <!-- HERO -->
 
-<header class="hero">
+    <header class="hero">
 
-<div class="hero-content">
+        <div class="eyebrow">
+            Creative Careers
+        </div>
 
-<div class="eyebrow">Careers + Collaborations</div>
+        <h1>
+            Looking for film projects near you?
+        </h1>
 
-<h1>Looking for film production jobs near you?</h1>
+        <p>
+            Explore hypothetical opportunities in film, video, production,
+            editing, and creative work across Iowa and the Midwest.
+            Search by keyword, location, or job type.
+        </p>
 
-<p>
-Sage & Frame brings together filmmakers, editors, producers,
-cinematographers, and emerging creatives who want to build meaningful
-careers without leaving the Midwest.
-</p>
+    </header>
 
-</div>
+    <main>
 
-</header>
+        <!-- JOB SEARCH -->
 
+        <section class="jobs-section">
 
-<main>
+            <div class="jobs-header">
+
+                <div class="eyebrow">
+                    Open Opportunities
+                </div>
 
+                <h2>
+                    Find your next project.
+                </h2>
 
-<!-- INTRO -->
+                <p>
+                    These 20 listings are fictional examples created for this
+                    educational website. All opportunities are shown as open
+                    through January 2027.
+                </p>
 
-<section class="intro">
+            </div>
 
-<div class="eyebrow">Join the Studio</div>
+            <!-- FILTERS -->
 
-<h2>Come make something with us.</h2>
+            <div class="filters">
 
-<p>
-Our Iowa City studio works on commercial campaigns, independent films,
-social content, documentaries, and wedding films. We look for curious
-people who care about visual storytelling and collaborative work.
-</p>
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search jobs, skills, or keywords..."
+                    aria-label="Search jobs"
+                >
 
-</section>
+                <select
+                    id="locationFilter"
+                    aria-label="Filter by location"
+                >
 
+                    <option value="">All locations</option>
+                    <option>Iowa City, IA</option>
+                    <option>Des Moines, IA</option>
+                    <option>Cedar Rapids, IA</option>
+                    <option>Ames, IA</option>
+                    <option>Davenport, IA</option>
+                    <option>Chicago, IL</option>
+                    <option>Minneapolis, MN</option>
+                    <option>Madison, WI</option>
+                    <option>Omaha, NE</option>
+                    <option>Remote</option>
 
-<!-- JOB OPENINGS -->
+                </select>
 
-<section class="jobs">
+                <select
+                    id="typeFilter"
+                    aria-label="Filter by job type"
+                >
 
-<div class="job">
+                    <option value="">All job types</option>
+                    <option>Production</option>
+                    <option>Cinematography</option>
+                    <option>Editing</option>
+                    <option>Photography</option>
+                    <option>Audio</option>
+                    <option>Motion Design</option>
+                    <option>Social Media</option>
+                    <option>Internship</option>
 
-<div>
-<div class="job-type">Entry Level</div>
-<h3>Production Assistant</h3>
-</div>
+                </select>
 
-<div>
+            </div>
 
-<p>
-Assist our crew with equipment, set preparation, schedules, talent,
-and day-to-day production needs.
-</p>
+            <div
+                class="result-count"
+                id="resultCount"
+            >
+                20 opportunities
+            </div>
 
-<p>
-This role is designed for emerging filmmakers who want hands-on
-experience working on professional productions.
-</p>
+            <!-- JOB LISTINGS -->
 
-</div>
+            <div
+                class="jobs-grid"
+                id="jobsGrid"
+            >
 
-</div>
+                <!-- JOB 1 -->
 
+                <article
+                    class="job-card"
+                    data-location="Iowa City, IA"
+                    data-type="Production"
+                >
 
-<div class="job">
+                    <div class="job-meta">
+                        Production • Iowa City, IA
+                    </div>
 
-<div>
-<div class="job-type">Part Time</div>
-<h3>Assistant Video Editor</h3>
-</div>
+                    <h3>
+                        Production Assistant — Brand Film
+                    </h3>
 
-<div>
+                    <p>
+                        Support a two-day lifestyle brand shoot with equipment
+                        setup, releases, production runs, and on-set coordination.
+                    </p>
 
-<p>
-Work with our post-production team to organize footage, prepare
-project files, edit short-form content, and assist with client projects.
-</p>
+                    <div class="job-bottom">
 
-<p>
-Experience with professional editing software and a strong sense
-of visual storytelling are preferred.
-</p>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-</div>
+                        <a
+                            class="button"
+                            href="mailto:careers@sageandframe.example?subject=Production Assistant"
+                        >
+                            Apply
+                        </a>
 
-</div>
+                    </div>
 
+                </article>
 
-<div class="job">
 
-<div>
-<div class="job-type">Freelance</div>
-<h3>Cinematographer</h3>
-</div>
+                <!-- JOB 2 -->
 
-<div>
+                <article
+                    class="job-card"
+                    data-location="Des Moines, IA"
+                    data-type="Cinematography"
+                >
 
-<p>
-Join our network of freelance cinematographers for commercial,
-documentary, wedding, and narrative productions throughout Iowa
-and neighboring states.
-</p>
+                    <div class="job-meta">
+                        Cinematography • Des Moines, IA
+                    </div>
 
-<p>
-Applicants should have professional camera experience and a
-portfolio demonstrating strong composition and lighting skills.
-</p>
+                    <h3>
+                        Second Camera Operator
+                    </h3>
 
-</div>
+                    <p>
+                        Capture interviews and supporting footage for a
+                        regional nonprofit documentary project.
+                    </p>
 
-</div>
+                    <div class="job-bottom">
 
-</section>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Second Camera Operator">
+                            Apply
+                        </a>
 
-<!-- CREATIVE TEAM -->
+                    </div>
 
-<section class="team-section">
+                </article>
 
-<div class="team-heading">
 
-<div class="eyebrow">Our Creative Team</div>
+                <!-- JOB 3 -->
 
-<h2>Meet the people behind the frame.</h2>
+                <article
+                    class="job-card"
+                    data-location="Remote"
+                    data-type="Editing"
+                >
 
-<p>
-Our fictional roster brings together directors, producers,
-cinematographers, and editors with different approaches to storytelling.
-Explore their individual styles and a selection of the fictional films
-that define their work.
-</p>
+                    <div class="job-meta">
+                        Editing • Remote
+                    </div>
 
-</div>
+                    <h3>
+                        Assistant Video Editor
+                    </h3>
 
+                    <p>
+                        Organize footage, sync audio, build selects, and prepare
+                        project files for short-form commercial edits.
+                    </p>
 
-<!-- DIRECTORS -->
+                    <div class="job-bottom">
 
-<div class="role-group">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<h3 class="role-title">Directors</h3>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Assistant Video Editor">
+                            Apply
+                        </a>
 
-<div class="people-grid">
+                    </div>
 
+                </article>
 
-<!-- MARA ELLIS -->
 
-<article class="person">
+                <!-- JOB 4 -->
 
-<img
-class="profile-image"
-src="images/mara-ellis.jpg"
-alt="Fictional Sage & Frame director Mara Ellis">
+                <article
+                    class="job-card"
+                    data-location="Cedar Rapids, IA"
+                    data-type="Photography"
+                >
 
-<div class="person-content">
+                    <div class="job-meta">
+                        Photography • Cedar Rapids, IA
+                    </div>
 
-<div class="person-role">Director</div>
+                    <h3>
+                        Behind-the-Scenes Photographer
+                    </h3>
 
-<h3>Mara Ellis</h3>
+                    <p>
+                        Document cast, crew, and production moments during
+                        a three-day independent short film shoot.
+                    </p>
 
-<p class="person-description">
-Mara is known for intimate, character-driven stories, naturalistic
-performances, and quiet Midwestern landscapes. Her films often explore
-memory, family, and the relationship between people and place.
-</p>
+                    <div class="job-bottom">
 
-<div class="selected-label">Selected Works</div>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="works">
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=BTS Photographer">
+                            Apply
+                        </a>
 
-<div class="work-card poster-1">
-<span>Harvest Moon</span>
-</div>
+                    </div>
 
-<div class="work-card poster-2">
-<span>After the Thaw</span>
-</div>
+                </article>
 
-<div class="work-card poster-3">
-<span>County Line</span>
-</div>
 
-</div>
+                <!-- JOB 5 -->
 
-</div>
+                <article
+                    class="job-card"
+                    data-location="Ames, IA"
+                    data-type="Audio"
+                >
 
-</article>
+                    <div class="job-meta">
+                        Audio • Ames, IA
+                    </div>
 
+                    <h3>
+                        Location Sound Mixer
+                    </h3>
 
-<!-- JULIAN CROSS -->
+                    <p>
+                        Record dialogue and ambient sound for a small documentary
+                        crew filming interviews and campus scenes.
+                    </p>
 
-<article class="person">
+                    <div class="job-bottom">
 
-<img
-class="profile-image"
-src="images/julian-cross.png"
-alt="Fictional Sage & Frame director Julian Cross">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="person-content">
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Location Sound Mixer">
+                            Apply
+                        </a>
 
-<div class="person-role">Director</div>
+                    </div>
 
-<h3>Julian Cross</h3>
+                </article>
 
-<p class="person-description">
-Julian creates visually bold, emotionally driven narratives that combine
-realism with stylized imagery. His work frequently explores identity,
-change, and the people who shape a place.
-</p>
 
-<div class="selected-label">Selected Works</div>
+                <!-- JOB 6 -->
 
-<div class="works">
+                <article
+                    class="job-card"
+                    data-location="Chicago, IL"
+                    data-type="Production"
+                >
 
-<div class="work-card poster-4">
-<span>Wayside</span>
-</div>
+                    <div class="job-meta">
+                        Production • Chicago, IL
+                    </div>
 
-<div class="work-card poster-5">
-<span>The Other Shore</span>
-</div>
+                    <h3>
+                        Commercial Production Coordinator
+                    </h3>
 
-<div class="work-card poster-6">
-<span>Midwest Forever</span>
-</div>
+                    <p>
+                        Assist with schedules, call sheets, talent logistics,
+                        and vendor coordination for a regional campaign.
+                    </p>
 
-</div>
+                    <div class="job-bottom">
 
-</div>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-</article>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Production Coordinator">
+                            Apply
+                        </a>
 
-</div>
-</div>
+                    </div>
 
+                </article>
 
-<!-- PRODUCERS -->
 
-<div class="role-group">
+                <!-- JOB 7 -->
 
-<h3 class="role-title">Producers</h3>
+                <article
+                    class="job-card"
+                    data-location="Remote"
+                    data-type="Motion Design"
+                >
 
-<div class="people-grid">
+                    <div class="job-meta">
+                        Motion Design • Remote
+                    </div>
 
+                    <h3>
+                        Junior Motion Graphics Designer
+                    </h3>
 
-<!-- LENA HART -->
+                    <p>
+                        Create animated titles, lower thirds, and simple
+                        graphic sequences for branded video content.
+                    </p>
 
-<article class="person">
+                    <div class="job-bottom">
 
-<img
-class="profile-image"
-src="images/lena-hart.png"
-alt="Fictional Sage & Frame producer Lena Hart">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="person-content">
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Motion Graphics Designer">
+                            Apply
+                        </a>
 
-<div class="person-role">Producer</div>
+                    </div>
 
-<h3>Lena Hart</h3>
+                </article>
 
-<p class="person-description">
-Lena brings projects to life through thoughtful planning, creative
-collaboration, and a deep focus on meaningful, people-centered stories.
-She specializes in balancing ambitious ideas with practical production.
-</p>
 
-<div class="selected-label">Selected Works</div>
+                <!-- JOB 8 -->
 
-<div class="works">
+                <article
+                    class="job-card"
+                    data-location="Iowa City, IA"
+                    data-type="Internship"
+                >
 
-<div class="work-card poster-7">
-<span>Small Towns</span>
-</div>
+                    <div class="job-meta">
+                        Internship • Iowa City, IA
+                    </div>
 
-<div class="work-card poster-8">
-<span>Still Here</span>
-</div>
+                    <h3>
+                        Film Production Intern
+                    </h3>
 
-<div class="work-card poster-9">
-<span>Common Ground</span>
-</div>
+                    <p>
+                        Gain hands-on experience supporting pre-production,
+                        shoots, media organization, and post-production.
+                    </p>
 
-</div>
+                    <div class="job-bottom">
 
-</div>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-</article>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Film Production Intern">
+                            Apply
+                        </a>
 
+                    </div>
 
-<!-- THEO BENNETT -->
+                </article>
 
-<article class="person">
 
-<img
-class="profile-image"
-src="images/theo-bennett.png"
-alt="Fictional Sage & Frame producer Theo Bennett">
+                <!-- JOB 9 -->
 
-<div class="person-content">
+                <article
+                    class="job-card"
+                    data-location="Minneapolis, MN"
+                    data-type="Cinematography"
+                >
 
-<div class="person-role">Producer</div>
+                    <div class="job-meta">
+                        Cinematography • Minneapolis, MN
+                    </div>
 
-<h3>Theo Bennett</h3>
+                    <h3>
+                        Camera Assistant
+                    </h3>
 
-<p class="person-description">
-Theo specializes in commercial and documentary production with a focus
-on authentic storytelling, strong visuals, and creative problem solving.
-He enjoys working with brands, nonprofits, and emerging filmmakers.
-</p>
+                    <p>
+                        Support camera builds, lens changes, media management,
+                        and equipment checks for a commercial shoot.
+                    </p>
 
-<div class="selected-label">Selected Works</div>
+                    <div class="job-bottom">
 
-<div class="works">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="work-card poster-10">
-<span>The Road Ahead</span>
-</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Camera Assistant">
+                            Apply
+                        </a>
 
-<div class="work-card poster-11">
-<span>Between Seasons</span>
-</div>
+                    </div>
 
-<div class="work-card poster-12">
-<span>Lighter Days</span>
-</div>
+                </article>
 
-</div>
 
-</div>
+                <!-- JOB 10 -->
 
-</article>
+                <article
+                    class="job-card"
+                    data-location="Davenport, IA"
+                    data-type="Production"
+                >
 
-</div>
-</div>
+                    <div class="job-meta">
+                        Production • Davenport, IA
+                    </div>
 
+                    <h3>
+                        Documentary Field Producer
+                    </h3>
 
-<!-- CINEMATOGRAPHERS -->
+                    <p>
+                        Coordinate interview subjects, locations, story notes,
+                        and field logistics for a community documentary.
+                    </p>
 
-<div class="role-group">
+                    <div class="job-bottom">
 
-<h3 class="role-title">Cinematographers</h3>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="people-grid">
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Documentary Field Producer">
+                            Apply
+                        </a>
 
+                    </div>
 
-<!-- NORA VALE -->
+                </article>
 
-<article class="person">
 
-<img
-class="profile-image"
-src="images/nora-vale.png"
-alt="Fictional Sage & Frame cinematographer Nora Vale">
+                <!-- JOB 11 -->
 
-<div class="person-content">
+                <article
+                    class="job-card"
+                    data-location="Remote"
+                    data-type="Social Media"
+                >
 
-<div class="person-role">Cinematographer</div>
+                    <div class="job-meta">
+                        Social Media • Remote
+                    </div>
 
-<h3>Nora Vale</h3>
+                    <h3>
+                        Short-Form Video Creator
+                    </h3>
 
-<p class="person-description">
-Nora is drawn to natural light, rich textures, and authentic moments.
-Her cinematography highlights the beauty in everyday scenes and often
-features rural landscapes and small towns throughout the Midwest.
-</p>
+                    <p>
+                        Edit vertical clips, behind-the-scenes content, and
+                        campaign cutdowns for social media platforms.
+                    </p>
 
-<div class="selected-label">Selected Works</div>
+                    <div class="job-bottom">
 
-<div class="works">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="work-card poster-3">
-<span>Golden Hour</span>
-</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Short Form Video Creator">
+                            Apply
+                        </a>
 
-<div class="work-card poster-5">
-<span>River People</span>
-</div>
+                    </div>
 
-<div class="work-card poster-8">
-<span>Open Fields</span>
-</div>
+                </article>
 
-</div>
 
-</div>
+                <!-- JOB 12 -->
 
-</article>
+                <article
+                    class="job-card"
+                    data-location="Madison, WI"
+                    data-type="Audio"
+                >
 
+                    <div class="job-meta">
+                        Audio • Madison, WI
+                    </div>
 
-<!-- ELIAS MONROE -->
+                    <h3>
+                        Boom Operator
+                    </h3>
 
-<article class="person">
+                    <p>
+                        Work alongside the sound mixer to capture clean
+                        dialogue on a narrative short film production.
+                    </p>
 
-<img
-class="profile-image"
-src="images/elias-monroe.png"
-alt="Fictional Sage & Frame cinematographer Elias Monroe">
+                    <div class="job-bottom">
 
-<div class="person-content">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="person-role">Cinematographer</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Boom Operator">
+                            Apply
+                        </a>
 
-<h3>Elias Monroe</h3>
+                    </div>
 
-<p class="person-description">
-Elias is known for cinematic, high-contrast visuals and dynamic camera
-movement. His work often explores the intersection of people, place,
-and motion, from urban environments to rural landscapes.
-</p>
+                </article>
 
-<div class="selected-label">Selected Works</div>
 
-<div class="works">
+                <!-- JOB 13 -->
 
-<div class="work-card poster-4">
-<span>Northbound</span>
-</div>
+                <article
+                    class="job-card"
+                    data-location="Omaha, NE"
+                    data-type="Editing"
+                >
 
-<div class="work-card poster-7">
-<span>City Lights</span>
-</div>
+                    <div class="job-meta">
+                        Editing • Omaha, NE
+                    </div>
 
-<div class="work-card poster-1">
-<span>Last Light</span>
-</div>
+                    <h3>
+                        Wedding Film Editor
+                    </h3>
 
-</div>
+                    <p>
+                        Shape ceremony, speeches, and candid footage into
+                        emotionally driven highlight and feature films.
+                    </p>
 
-</div>
+                    <div class="job-bottom">
 
-</article>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-</div>
-</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Wedding Film Editor">
+                            Apply
+                        </a>
 
+                    </div>
 
-<!-- EDITORS -->
+                </article>
 
-<div class="role-group">
 
-<h3 class="role-title">Editors</h3>
+                <!-- JOB 14 -->
 
-<div class="people-grid">
+                <article
+                    class="job-card"
+                    data-location="Iowa City, IA"
+                    data-type="Production"
+                >
 
+                    <div class="job-meta">
+                        Production • Iowa City, IA
+                    </div>
 
-<!-- CAMILLE REED -->
+                    <h3>
+                        Art Department Assistant
+                    </h3>
 
-<article class="person">
+                    <p>
+                        Help source props, prepare sets, track materials,
+                        and assist with visual details for a branded shoot.
+                    </p>
 
-<img
-class="profile-image"
-src="images/camille-reed.png"
-alt="Fictional Sage & Frame editor Camille Reed">
+                    <div class="job-bottom">
 
-<div class="person-content">
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="person-role">Editor</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Art Department Assistant">
+                            Apply
+                        </a>
 
-<h3>Camille Reed</h3>
+                    </div>
 
-<p class="person-description">
-Camille brings a thoughtful, detail-oriented approach to post-production.
-She loves shaping stories through rhythm, emotion, and pacing, with a
-focus on documentary, narrative, and brand storytelling.
-</p>
+                </article>
 
-<div class="selected-label">Selected Works</div>
 
-<div class="works">
+                <!-- JOB 15 -->
 
-<div class="work-card poster-6">
-<span>Fragments</span>
-</div>
+                <article
+                    class="job-card"
+                    data-location="Des Moines, IA"
+                    data-type="Photography"
+                >
 
-<div class="work-card poster-2">
-<span>Home Again</span>
-</div>
+                    <div class="job-meta">
+                        Photography • Des Moines, IA
+                    </div>
 
-<div class="work-card poster-10">
-<span>The In Between</span>
-</div>
+                    <h3>
+                        Event Photographer
+                    </h3>
 
-</div>
+                    <p>
+                        Capture candid, detail, and environmental imagery
+                        for a creative industry launch event.
+                    </p>
 
-</div>
+                    <div class="job-bottom">
 
-</article>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Event Photographer">
+                            Apply
+                        </a>
 
-<!-- OWEN PARK -->
+                    </div>
 
-<article class="person">
+                </article>
 
-<img
-class="profile-image"
-src="images/owen-park.png"
-alt="Fictional Sage & Frame editor Owen Park">
 
-<div class="person-content">
+                <!-- JOB 16 -->
 
-<div class="person-role">Editor</div>
+                <article
+                    class="job-card"
+                    data-location="Cedar Rapids, IA"
+                    data-type="Internship"
+                >
 
-<h3>Owen Park</h3>
+                    <div class="job-meta">
+                        Internship • Cedar Rapids, IA
+                    </div>
 
-<p class="person-description">
-Owen is known for clean, cinematic edits and a strong sense of visual
-flow. He enjoys working on commercial campaigns, music videos, and
-short films, finding creative ways to make every story feel fresh.
-</p>
+                    <h3>
+                        Post-Production Intern
+                    </h3>
 
-<div class="selected-label">Selected Works</div>
+                    <p>
+                        Assist editors with file organization, transcription,
+                        selects, exports, captions, and archive management.
+                    </p>
 
-<div class="works">
+                    <div class="job-bottom">
 
-<div class="work-card poster-11">
-<span>Second Take</span>
-</div>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<div class="work-card poster-9">
-<span>Parallel</span>
-</div>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Post Production Intern">
+                            Apply
+                        </a>
 
-<div class="work-card poster-12">
-<span>What Stays</span>
-</div>
+                    </div>
 
-</div>
+                </article>
 
-</div>
 
-</article>
+                <!-- JOB 17 -->
 
-</div>
-</div>
+                <article
+                    class="job-card"
+                    data-location="Chicago, IL"
+                    data-type="Cinematography"
+                >
 
-</section>
+                    <div class="job-meta">
+                        Cinematography • Chicago, IL
+                    </div>
 
+                    <h3>
+                        Drone Camera Operator
+                    </h3>
 
-<!-- INTERNSHIPS -->
+                    <p>
+                        Capture aerial establishing shots and landscape
+                        footage for a Midwest tourism campaign.
+                    </p>
 
-<section class="internships">
+                    <div class="job-bottom">
 
-<div class="eyebrow">Student Opportunities</div>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-<h2>Film production internships.</h2>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Drone Camera Operator">
+                            Apply
+                        </a>
 
-<p>
-Our fictional internship program gives college students and emerging
-filmmakers experience with pre-production, production, editing,
-creative development, and client communication.
-</p>
+                    </div>
 
-<p>
-Interns work alongside our creative team, assist on professional
-shoots, and build practical experience that can be added to a
-portfolio or résumé.
-</p>
+                </article>
 
-</section>
 
+                <!-- JOB 18 -->
 
-<!-- CAREER MESSAGE -->
+                <article
+                    class="job-card"
+                    data-location="Ames, IA"
+                    data-type="Social Media"
+                >
 
-<section class="career-message">
+                    <div class="job-meta">
+                        Social Media • Ames, IA
+                    </div>
 
-<div class="eyebrow">Creative Careers</div>
+                    <h3>
+                        Social Video Production Assistant
+                    </h3>
 
-<h2>You shouldn't have to move to a coast to work in film.</h2>
+                    <p>
+                        Support quick-turn shoots and edits designed for
+                        reels, shorts, and campaign social content.
+                    </p>
 
-<p>
-Businesses, agencies, universities, artists, and independent
-filmmakers throughout the Midwest need talented creative professionals.
-Sage & Frame exists to help build that creative community here.
-</p>
+                    <div class="job-bottom">
 
-</section>
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
 
-</main>
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Social Video Production Assistant">
+                            Apply
+                        </a>
 
+                    </div>
 
-<footer>
+                </article>
 
-<div class="footer-content">
 
-<h2>SAGE & FRAME</h2>
+                <!-- JOB 19 -->
 
-<p>Film + Creative Studio · Iowa City, Iowa</p>
+                <article
+                    class="job-card"
+                    data-location="Minneapolis, MN"
+                    data-type="Motion Design"
+                >
 
-<div class="footer-nav">
-<a href="index.html">Home</a>
-<a href="video-production.html">Film & Video</a>
-<a href="film-jobs.html">Careers</a>
-<a href="wedding-video.html">Weddings</a>
-</div>
+                    <div class="job-meta">
+                        Motion Design • Minneapolis, MN
+                    </div>
 
-</div>
+                    <h3>
+                        Title & Graphics Animator
+                    </h3>
 
-<div class="notice">
-This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
-</div>
+                    <p>
+                        Design and animate opening titles and supporting
+                        graphic elements for an independent documentary.
+                    </p>
 
-</footer>
+                    <div class="job-bottom">
+
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
+
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Title Graphics Animator">
+                            Apply
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JOB 20 -->
+
+                <article
+                    class="job-card"
+                    data-location="Remote"
+                    data-type="Editing"
+                >
+
+                    <div class="job-meta">
+                        Editing • Remote
+                    </div>
+
+                    <h3>
+                        Color & Finishing Assistant
+                    </h3>
+
+                    <p>
+                        Prepare timelines, organize deliverables, and assist
+                        with final color and finishing workflows.
+                    </p>
+
+                    <div class="job-bottom">
+
+                        <span class="deadline">
+                            Open through Jan. 31, 2027
+                        </span>
+
+                        <a class="button"
+                           href="mailto:careers@sageandframe.example?subject=Color Finishing Assistant">
+                            Apply
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="empty"
+                id="emptyState"
+            >
+
+                <h3>
+                    No projects match those filters.
+                </h3>
+
+                <p>
+                    Try a different keyword, location, or job type.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TEAM LINK -->
+
+        <section class="team-cta">
+
+            <div class="eyebrow">
+                Meet Sage & Frame
+            </div>
+
+            <h2>
+                Looking for our creative team?
+            </h2>
+
+            <p>
+                Our filmmakers, producers, editors, and visual storytellers
+                now have their own page.
+            </p>
+
+            <a
+                class="button"
+                href="creative-team.html"
+            >
+                Meet Our Team
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                SAGE & FRAME
+            </h2>
+
+            <p>
+                Iowa City, Iowa
+            </p>
+
+            <div class="footer-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="video-production.html">
+                    Film & Video
+                </a>
+
+                <a href="film-jobs.html">
+                    Careers
+                </a>
+
+                <a href="creative-team.html">
+                    Our Team
+                </a>
+
+                <a href="wedding-video.html">
+                    Weddings
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="notice">
+            This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa.
+            It is not a real business.
+        </div>
+
+    </footer>
+
+
+    <!-- JOB FILTER JAVASCRIPT -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const locationFilter =
+            document.getElementById("locationFilter");
+
+        const typeFilter =
+            document.getElementById("typeFilter");
+
+        const cards =
+            [...document.querySelectorAll(".job-card")];
+
+        const count =
+            document.getElementById("resultCount");
+
+        const empty =
+            document.getElementById("emptyState");
+
+
+        function filterJobs() {
+
+            const search =
+                searchInput.value
+                .toLowerCase()
+                .trim();
+
+            const location =
+                locationFilter.value;
+
+            const type =
+                typeFilter.value;
+
+            let shown = 0;
+
+
+            cards.forEach(card => {
+
+                const text =
+                    card.innerText.toLowerCase();
+
+                const matchesSearch =
+                    !search ||
+                    text.includes(search);
+
+                const matchesLocation =
+                    !location ||
+                    card.dataset.location === location;
+
+                const matchesType =
+                    !type ||
+                    card.dataset.type === type;
+
+
+                const shouldShow =
+                    matchesSearch &&
+                    matchesLocation &&
+                    matchesType;
+
+
+                if (shouldShow) {
+
+                    card.style.display = "flex";
+                    shown++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            count.textContent =
+                shown + " " +
+                (shown === 1
+                    ? "opportunity"
+                    : "opportunities");
+
+
+            if (shown === 0) {
+
+                empty.style.display = "block";
+
+            } else {
+
+                empty.style.display = "none";
+
+            }
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterJobs
+        );
+
+        locationFilter.addEventListener(
+            "change",
+            filterJobs
+        );
+
+        typeFilter.addEventListener(
+            "change",
+            filterJobs
+        );
+
+    </script>
 
 </body>
+
 </html>
