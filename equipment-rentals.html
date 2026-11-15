@@ -240,23 +240,25 @@ main {
     font-size: 11px;
 }
 
-/* UPDATED: REAL IMAGE DISPLAY */
+/* UPDATED IMAGE DISPLAY */
 
 .equipment-visual {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 190px;
-    margin: 12px 0;
+    height: 230px;
+    margin: 15px 0 20px;
+    padding: 0;
     overflow: hidden;
     background: var(--cream);
 }
 
 .equipment-visual img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
+    object-position: center;
 }
 
 .equipment-card h3 {
@@ -787,7 +789,7 @@ const equipment = [
         category: "Audio",
         hour: 9,
         day: 50,
-        image: "images/equipment/boom-pole-kit.jpg",
+        image: "images/equipment/boom-pole-microphone-kit.jpg",
         description: "Boom pole and shotgun microphone setup for professional dialogue recording."
     },
     {
@@ -814,7 +816,7 @@ const equipment = [
         category: "Lighting",
         hour: 8,
         day: 45,
-        image: "images/equipment/led-panel-kit.jpg",
+        image: "images/equipment/led-panel-lighting-kit.jpg",
         description: "Adjustable LED lighting for interviews, product videos, and smaller production sets."
     },
     {
@@ -832,7 +834,7 @@ const equipment = [
         category: "Accessories",
         hour: 9,
         day: 45,
-        image: "images/equipment/dji-rs3-pro.jpg",
+        image: "images/equipment/dji-rs3-pro-gimbal.jpg",
         description: "Professional camera stabilizer for smooth tracking shots and dynamic movement."
     },
     {
@@ -841,7 +843,7 @@ const equipment = [
         category: "Accessories",
         hour: 5,
         day: 25,
-        image: "images/equipment/video-tripod.jpg",
+        image: "images/equipment/professional-video-tripod.jpg",
         description: "Stable video tripod with fluid head for smooth pans and controlled camera movement."
     },
     {
