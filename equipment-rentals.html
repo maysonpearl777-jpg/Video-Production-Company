@@ -1,795 +1,1096 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Equipment Rentals | Sage & Frame Studio</title>
-  <meta name="description" content="Browse cinema cameras, audio gear, lighting kits, gimbals, and professional filmmaking equipment for rent at Sage & Frame Studio.">
+<title>Film Equipment Rentals in Iowa | Sage & Frame Studio</title>
 
-  <style>
-    :root {
-      --cream: #FAF9F6;
-      --sage: #829672;
-      --evergreen: #344C3D;
-      --lavender: #E3DADE;
-      --blue: #D0DBE7;
-      --mauve: #D8959B;
+<meta name="description"
+content="Explore film equipment rentals at Sage & Frame Studio, including cinema cameras, microphones, lighting kits, gimbals, and production accessories with hourly and daily rates.">
+
+<style>
+:root {
+    --lavender: #E3DADE;
+    --sky: #D0DBE7;
+    --mauve: #D8959B;
+    --sage: #829672;
+    --evergreen: #344C3D;
+    --cream: #FAF9F6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--evergreen);
+    background: var(--cream);
+    line-height: 1.7;
+}
+
+.notice {
+    background: var(--evergreen);
+    color: white;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid var(--lavender);
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: var(--evergreen);
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--evergreen);
+    text-decoration: none;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--mauve);
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+.hero {
+    background: var(--lavender);
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 25px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 65px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--evergreen);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 28px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.button:hover {
+    background: var(--sage);
+}
+
+.hero .button {
+    margin-top: 30px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 43px;
+    margin: 15px 0 20px;
+}
+
+.intro p {
+    font-size: 17px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 43px;
+    margin: 10px 0;
+}
+
+/* FILTERS */
+
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: var(--sky);
+}
+
+.filter-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-field input,
+.filter-field select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #aebbb0;
+    border-radius: 0;
+    background: var(--cream);
+    color: var(--evergreen);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.results-count {
+    margin-bottom: 25px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* EQUIPMENT GRID */
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.equipment-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 435px;
+    padding: 35px;
+    background: var(--sky);
+}
+
+.equipment-card:nth-child(3n+2) {
+    background: var(--mauve);
+}
+
+.equipment-card:nth-child(3n) {
+    background: var(--sage);
+    color: white;
+}
+
+.equipment-card:nth-child(3n) .equipment-description,
+.equipment-card:nth-child(3n) .rate-label {
+    color: white;
+}
+
+.equipment-category {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.equipment-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115px;
+    margin: 12px 0;
+    font-size: 58px;
+}
+
+.equipment-card h3 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.equipment-description {
+    font-size: 14px;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.rates {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid currentColor;
+}
+
+.rate-price {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.rate-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipment-card .button {
+    width: 100%;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--lavender);
+}
+
+/* RENTAL CALCULATOR */
+
+.rental-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 110px;
+}
+
+.rental-copy {
+    background: var(--evergreen);
+    color: white;
+    padding: 65px;
+}
+
+.rental-copy h2 {
+    font-size: 43px;
+    line-height: 1.2;
+}
+
+.rental-calculator {
+    background: var(--lavender);
+    padding: 55px 45px;
+}
+
+.rental-calculator h3 {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.duration-label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#rentalHours {
+    padding: 12px;
+    width: 110px;
+    border: 1px solid var(--sage);
+    background: var(--cream);
+    font-size: 16px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--sage);
+}
+
+.cart-item strong {
+    display: block;
+}
+
+.cart-item small {
+    display: block;
+}
+
+.remove-button {
+    background: none;
+    border: 1px solid var(--evergreen);
+    padding: 7px 12px;
+    color: var(--evergreen);
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background: var(--evergreen);
+    color: white;
+}
+
+.estimate-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 25px 0;
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.rental-note {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* EDITORIAL STATEMENT */
+
+.statement {
+    background: var(--sky);
+    padding: 90px 30px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.statement h2 {
+    font-size: 43px;
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--evergreen);
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    padding: 55px 20px;
+}
+
+.footer-content h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.footer-nav a:hover {
+    color: var(--lavender);
+}
+
+footer .notice {
+    border-top: 1px solid rgba(255,255,255,.25);
+}
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+    .filters {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--evergreen);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    a { color: inherit; }
-
-    button, input, select {
-      font: inherit;
+    .rental-section {
+        grid-template-columns: 1fr;
     }
+}
 
-    button { cursor: pointer; }
-
-    .notice {
-      padding: 9px 18px;
-      text-align: center;
-      background: var(--lavender);
-      font-size: 12px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 22px 6%;
-      background: var(--cream);
-      border-bottom: 1px solid #e3e5df;
-    }
-
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
+@media (max-width: 750px) {
     nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    nav a {
-      text-decoration: none;
-      font-size: 13px;
+    .nav-links {
+        text-align: center;
+        margin-top: 15px;
     }
 
-    nav a:hover, nav a.active {
-      color: #627b55;
-      text-decoration: underline;
-    }
-
-    .hero {
-      padding: 75px 7%;
-      text-align: center;
-      background: var(--evergreen);
-      color: white;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-    }
-
-    h1, h2, h3 {
-      font-family: Georgia, serif;
-      font-weight: normal;
+    .nav-links a {
+        display: inline-block;
+        margin: 7px;
     }
 
     h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      margin: 15px 0;
+        font-size: 44px;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #e1e7dd;
+    .hero {
+        min-height: 500px;
     }
 
     main {
-      max-width: 1350px;
-      margin: auto;
-      padding: 55px 6%;
+        padding: 65px 20px;
     }
 
-    .section-heading {
-      margin-bottom: 25px;
+    .intro h2,
+    .section-title h2,
+    .statement h2 {
+        font-size: 36px;
     }
 
-    .section-heading h2 {
-      font-size: 36px;
-      margin: 0;
+    .filters,
+    .equipment-grid {
+        grid-template-columns: 1fr;
     }
 
-    .filters {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 28px;
+    .rental-copy,
+    .rental-calculator {
+        padding: 45px 30px;
     }
-
-    input, select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #cbd3c7;
-      background: white;
-      color: var(--evergreen);
-      border-radius: 6px;
-    }
-
-    .field-label {
-      display: block;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .equipment-card {
-      background: white;
-      border: 1px solid #e5e7e1;
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .equipment-image {
-      height: 200px;
-      background: #edf0ea;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 65px;
-    }
-
-    .equipment-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 15px;
-    }
-
-    .equipment-info {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .category {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #6c8261;
-    }
-
-    .equipment-info h3 {
-      font-size: 23px;
-      margin: 8px 0;
-    }
-
-    .description {
-      font-size: 13px;
-      color: #5d6c61;
-      flex: 1;
-    }
-
-    .pricing {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 14px 0;
-      margin-top: 15px;
-      border-top: 1px solid #e7e9e4;
-    }
-
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .price small {
-      display: block;
-      font-size: 11px;
-      font-weight: normal;
-      color: #667369;
-    }
-
-    .add-button, .primary-button {
-      border: 0;
-      border-radius: 6px;
-      background: var(--evergreen);
-      color: white;
-      padding: 12px 16px;
-      width: 100%;
-    }
-
-    .add-button:hover, .primary-button:hover {
-      background: #536c58;
-    }
-
-    .rental-panel {
-      margin-top: 65px;
-      padding: 32px;
-      background: #edf1e9;
-      border-radius: 12px;
-    }
-
-    .rental-panel h2 {
-      font-size: 32px;
-      margin-top: 0;
-    }
-
-    .duration-row {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin: 22px 0;
-    }
-
-    .duration-row input {
-      max-width: 110px;
-    }
-
-    .cart-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      padding: 13px 0;
-      border-bottom: 1px solid #d0d8cc;
-    }
-
-    .remove-button {
-      background: transparent;
-      color: #a34242;
-      border: 1px solid #b98b8b;
-      border-radius: 5px;
-      padding: 6px 10px;
-    }
-
-    .total {
-      display: flex;
-      justify-content: space-between;
-      font-size: 24px;
-      font-weight: bold;
-      margin: 25px 0;
-    }
-
-    .note {
-      font-size: 12px;
-      color: #5d6c61;
-    }
-
-    .empty {
-      text-align: center;
-      padding: 35px;
-      color: #67766a;
-    }
-
-    footer {
-      background: var(--evergreen);
-      color: white;
-      padding: 35px 6%;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    footer p {
-      max-width: 850px;
-      margin: 10px auto;
-    }
-
-    @media (max-width: 950px) {
-      .catalog { grid-template-columns: repeat(2, 1fr); }
-      .filters { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-      .catalog, .filters { grid-template-columns: 1fr; }
-      header { justify-content: center; }
-      nav { justify-content: center; }
-      .hero { padding: 55px 6%; }
-      .rental-panel { padding: 20px; }
-      .equipment-image { height: 180px; }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <div class="notice">
-    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
-  </div>
+<div class="notice">
+This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+</div>
 
-  <header>
-    <a href="index.html" class="logo">Sage & Frame Studio</a>
+<nav aria-label="Main navigation">
+    <a class="logo" href="index.html">SAGE & FRAME</a>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="video-production.html">Film & Video</a>
-      <a href="film-jobs.html">Careers</a>
-      <a href="wedding-video.html">Weddings</a>
-      <a href="creative-team.html">Our Team</a>
-      <a href="equipment-rentals.html" class="active" aria-current="page">Equipment Rentals</a>
-    </nav>
-  </header>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="video-production.html">Film & Video</a>
+        <a href="film-jobs.html">Careers</a>
+        <a href="equipment-rentals.html" aria-current="page">Equipment Rentals</a>
+        <a href="creative-team.html">Our Team</a>
+        <a href="wedding-video.html">Weddings</a>
+    </div>
+</nav>
 
-  <section class="hero">
-    <div class="eyebrow">Create without limits</div>
-    <h1>Equipment Rentals</h1>
-    <p>
-      From cinema cameras to professional sound and lighting,
-      discover thoughtfully selected equipment for your next
-      production. Browse our collection and build your rental list.
-    </p>
-  </section>
+<header class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">Professional Production Gear</div>
 
-  <main>
-    <section aria-labelledby="catalog-heading">
-      <div class="section-heading">
-        <div class="eyebrow">Our collection</div>
-        <h2 id="catalog-heading">Find Your Gear</h2>
+        <h1>Equipment Rentals</h1>
+
         <p>
-          Search our selection of professional production equipment.
-          Compare hourly and full-day rates, then create a personalized
-          rental estimate.
+            Every great story begins with the right tools.
+            Explore our collection of cinema cameras,
+            professional audio equipment, lighting kits,
+            and filmmaking accessories for productions
+            throughout Iowa and the Midwest.
         </p>
-      </div>
 
-      <div class="filters">
-        <div>
-          <label class="field-label" for="search">Search equipment</label>
-          <input id="search" type="search"
-                 placeholder="Search cameras, microphones, gimbals...">
-        </div>
+        <a href="#equipment" class="button">Explore Equipment</a>
+    </div>
+</header>
 
-        <div>
-          <label class="field-label" for="categoryFilter">Category</label>
-          <select id="categoryFilter">
-            <option value="All">All Equipment</option>
-            <option value="Cameras">Cameras</option>
-            <option value="Audio">Audio</option>
-            <option value="Lighting">Lighting</option>
-            <option value="Accessories">Accessories</option>
-          </select>
-        </div>
+<main>
 
-        <div>
-          <label class="field-label" for="priceFilter">Hourly budget</label>
-          <select id="priceFilter">
-            <option value="999">Any Price</option>
-            <option value="5">Up to $5/hr</option>
-            <option value="10">Up to $10/hr</option>
-            <option value="20">Up to $20/hr</option>
-            <option value="30">Up to $30/hr</option>
-          </select>
-        </div>
+<section class="intro">
+    <div class="eyebrow">Create Without Limits</div>
 
-        <div>
-          <label class="field-label" for="sortFilter">Sort by</label>
-          <select id="sortFilter">
-            <option value="default">Featured</option>
-            <option value="low">Price: Low to High</option>
-            <option value="high">Price: High to Low</option>
-            <option value="name">Name: A to Z</option>
-          </select>
-        </div>
-      </div>
+    <h2>Professional tools. Thoughtful productions.</h2>
 
-      <p id="resultCount" aria-live="polite"></p>
-      <div id="catalog" class="catalog"></div>
-    </section>
-
-    <section class="rental-panel" aria-labelledby="rental-heading">
-      <div class="eyebrow">Plan your production</div>
-      <h2 id="rental-heading">Your Rental List</h2>
-
-      <p>
-        Add equipment to your list and select your rental duration
-        to estimate your production costs.
-      </p>
-
-      <div class="duration-row">
-        <label for="hours">Rental duration (hours)</label>
-        <input type="number" id="hours" min="1" max="720" value="4">
-      </div>
-
-      <div id="cartItems" aria-live="polite">
-        <p>No equipment selected yet.</p>
-      </div>
-
-      <div class="total">
-        <span>Estimated Total</span>
-        <span id="total">$0.00</span>
-      </div>
-
-      <button class="primary-button" id="copyEstimate">
-        Copy Rental Estimate
-      </button>
-
-      <p class="note">
-        Prices are illustrative rates for a fictional business.
-        An 8-hour rental day is billed at the lower of the
-        daily rate or eight hourly charges. Longer rentals use
-        full 8-hour blocks plus any remaining hours.
-        Estimates exclude taxes, deposits, delivery, and other fees.
-        No reservations or payments are processed on this website.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Sage & Frame Studio · Thoughtful films. Beautifully made.</p>
     <p>
-      This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+        At Sage & Frame Studio, we believe quality equipment
+        should be accessible to filmmakers at every stage
+        of their creative journey. Whether you're producing
+        a short film, commercial, documentary, wedding film,
+        or branded campaign, the right gear can help bring
+        your vision to life.
     </p>
-  </footer>
 
-  <script>
-    const equipment = [
-      {
+    <p>
+        Our fictional rental collection features versatile
+        cameras, dependable audio systems, professional
+        lighting solutions, and essential production accessories.
+        Browse equipment by category, compare hourly and
+        daily prices, and create a customized rental estimate
+        before planning your next project.
+    </p>
+</section>
+
+<section id="equipment" aria-labelledby="equipment-title">
+
+    <div class="section-title">
+        <div class="eyebrow">Our Collection</div>
+        <h2 id="equipment-title">Find your creative tools.</h2>
+        <p>Explore equipment designed for every stage of production.</p>
+    </div>
+
+    <div class="filters">
+
+        <div class="filter-field">
+            <label for="searchInput">Search Equipment</label>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search cameras, microphones..."
+            >
+        </div>
+
+        <div class="filter-field">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+                <option value="all">All Equipment</option>
+                <option value="Cameras">Cameras</option>
+                <option value="Audio">Audio</option>
+                <option value="Lighting">Lighting</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="priceFilter">Hourly Price</label>
+            <select id="priceFilter">
+                <option value="999">Any Price</option>
+                <option value="5">Up to $5/hr</option>
+                <option value="10">Up to $10/hr</option>
+                <option value="20">Up to $20/hr</option>
+                <option value="30">Up to $30/hr</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="sortFilter">Sort Equipment</label>
+            <select id="sortFilter">
+                <option value="default">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+        </div>
+
+    </div>
+
+    <p id="resultsCount" class="results-count" aria-live="polite"></p>
+
+    <div class="equipment-grid" id="equipmentGrid"></div>
+
+</section>
+
+<section class="rental-section" aria-labelledby="rental-title">
+
+    <div class="rental-copy">
+        <div class="eyebrow">Plan Your Production</div>
+
+        <h2 id="rental-title">Build your perfect kit.</h2>
+
+        <p>
+            Every project is different. Select the equipment
+            that fits your production and build a personalized
+            rental estimate.
+        </p>
+
+        <p>
+            Choose your rental duration to calculate costs
+            automatically. Each piece of equipment includes
+            an hourly rate and a discounted eight-hour
+            daily rate.
+        </p>
+
+        <p>
+            Our goal is to make production planning simple,
+            transparent, and approachable for independent
+            filmmakers and creative teams.
+        </p>
+    </div>
+
+    <div class="rental-calculator">
+
+        <div class="eyebrow">Your Equipment</div>
+
+        <h3>Your Rental List</h3>
+
+        <label class="duration-label" for="rentalHours">
+            Rental Duration (Hours)
+        </label>
+
+        <input
+            type="number"
+            id="rentalHours"
+            min="1"
+            max="720"
+            value="4"
+        >
+
+        <div id="cartItems" aria-live="polite">
+            <p>No equipment selected yet.</p>
+        </div>
+
+        <div class="estimate-total">
+            <span>Estimated Total</span>
+            <span id="estimateTotal">$0.00</span>
+        </div>
+
+        <button class="button" id="copyEstimate">
+            Copy Rental Estimate
+        </button>
+
+        <p class="rental-note">
+            Fictional educational pricing only. Each eight-hour
+            block is charged at the daily rate, with shorter
+            periods charged at the lower of hourly pricing or
+            the daily rate. Estimates exclude taxes, deposits,
+            and additional fees. No real reservations or
+            payments are accepted.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="statement">
+
+    <div class="eyebrow">Our Philosophy</div>
+
+    <h2>
+        The right equipment helps turn a creative idea
+        into something worth remembering.
+    </h2>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>SAGE & FRAME</h2>
+
+        <p>Equipment Rentals + Creative Studio · Iowa City, Iowa</p>
+
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="video-production.html">Film & Video</a>
+            <a href="film-jobs.html">Careers</a>
+            <a href="equipment-rentals.html">Equipment Rentals</a>
+            <a href="creative-team.html">Our Team</a>
+            <a href="wedding-video.html">Weddings</a>
+        </div>
+
+    </div>
+
+    <div class="notice">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
+
+</footer>
+
+<script>
+const equipment = [
+    {
         id: 1,
         name: "Sony FX3 Cinema Camera",
         category: "Cameras",
         hour: 20,
         day: 110,
-        description: "Compact full-frame cinema camera for commercial, documentary, and wedding filmmaking.",
-        image: "📷"
-      },
-      {
+        icon: "📷",
+        description: "Compact full-frame cinema camera for weddings, documentaries, and commercial productions."
+    },
+    {
         id: 2,
         name: "Sony FX6 Cinema Camera",
         category: "Cameras",
         hour: 35,
         day: 200,
-        description: "Professional full-frame cinema camera with advanced video features and flexible production controls.",
-        image: "🎥"
-      },
-      {
+        icon: "🎥",
+        description: "Professional cinema camera with advanced recording capabilities and flexible production controls."
+    },
+    {
         id: 3,
         name: "Canon C70 Cinema Camera",
         category: "Cameras",
         hour: 25,
         day: 145,
-        description: "Versatile cinema camera ideal for interviews, branded content, and independent films.",
-        image: "📹"
-      },
-      {
+        icon: "📹",
+        description: "Versatile cinema camera designed for interviews, independent films, and branded content."
+    },
+    {
         id: 4,
         name: "Zoom H4n Pro Recorder",
         category: "Audio",
         hour: 5,
         day: 25,
-        description: "Portable four-track audio recorder for location sound, interviews, and field recording.",
-        image: "🎙️"
-      },
-      {
+        icon: "🎙️",
+        description: "Portable multitrack recorder for interviews, field recording, and location sound."
+    },
+    {
         id: 5,
-        name: "Sennheiser Shotgun Mic",
+        name: "Sennheiser Shotgun Microphone",
         category: "Audio",
         hour: 6,
         day: 35,
-        description: "Directional microphone designed for capturing dialogue and focused sound.",
-        image: "🎤"
-      },
-      {
+        icon: "🎤",
+        description: "Directional microphone for capturing dialogue and detailed production audio."
+    },
+    {
         id: 6,
         name: "Boom Pole & Microphone Kit",
         category: "Audio",
         hour: 9,
         day: 50,
-        description: "Boom pole, shotgun microphone, and essential accessories for on-set dialogue recording.",
-        image: "🎙️"
-      },
-      {
+        icon: "🎙️",
+        description: "Boom pole and shotgun microphone setup for professional dialogue recording."
+    },
+    {
         id: 7,
-        name: "Wireless Lavalier Mic Kit",
+        name: "Wireless Lavalier Microphone Kit",
         category: "Audio",
         hour: 8,
         day: 45,
-        description: "Wireless microphone system for interviews, presentations, and documentary production.",
-        image: "🎤"
-      },
-      {
+        icon: "🎤",
+        description: "Wireless microphone system for interviews, presentations, and documentary filmmaking."
+    },
+    {
         id: 8,
         name: "Aputure 300d II Lighting Kit",
         category: "Lighting",
         hour: 12,
         day: 65,
-        description: "Powerful daylight LED fixture for cinematic lighting setups and commercial productions.",
-        image: "💡"
-      },
-      {
+        icon: "💡",
+        description: "Powerful daylight LED lighting solution for cinematic and commercial productions."
+    },
+    {
         id: 9,
         name: "LED Panel Lighting Kit",
         category: "Lighting",
         hour: 8,
         day: 45,
-        description: "Adjustable LED lighting solution for interviews, product videos, and smaller productions.",
-        image: "🔆"
-      },
-      {
+        icon: "🔆",
+        description: "Adjustable LED lighting for interviews, product videos, and smaller production sets."
+    },
+    {
         id: 10,
         name: "Three-Point Lighting Kit",
         category: "Lighting",
         hour: 18,
         day: 100,
-        description: "Complete key, fill, and backlighting setup for professional video productions.",
-        image: "💡"
-      },
-      {
+        icon: "💡",
+        description: "Complete key, fill, and backlighting arrangement for professional video productions."
+    },
+    {
         id: 11,
         name: "DJI RS 3 Pro Gimbal",
         category: "Accessories",
         hour: 9,
         day: 45,
-        description: "Professional camera stabilizer for smooth movement and dynamic cinematic shots.",
-        image: "🎥"
-      },
-      {
+        icon: "🎥",
+        description: "Professional camera stabilizer for smooth tracking shots and dynamic movement."
+    },
+    {
         id: 12,
         name: "Professional Video Tripod",
         category: "Accessories",
         hour: 5,
         day: 25,
-        description: "Sturdy video tripod with fluid head for controlled pans and smooth camera movement.",
-        image: "📷"
-      },
-      {
+        icon: "📷",
+        description: "Stable video tripod with fluid head for smooth pans and controlled camera movement."
+    },
+    {
         id: 13,
-        name: "Camera Monitor",
+        name: "Camera Field Monitor",
         category: "Accessories",
         hour: 6,
         day: 30,
-        description: "External field monitor for framing, exposure, and accurate on-set monitoring.",
-        image: "🖥️"
-      },
-      {
+        icon: "🖥️",
+        description: "External monitor for accurate framing, exposure, and on-set viewing."
+    },
+    {
         id: 14,
         name: "Cinema Lens Kit",
         category: "Accessories",
         hour: 15,
         day: 85,
-        description: "Selection of cinema lenses for creative framing, portraits, and professional video work.",
-        image: "📷"
-      }
-    ];
+        icon: "📷",
+        description: "Versatile lens collection for creative compositions, portraits, and cinematic storytelling."
+    }
+];
 
-    const cart = new Set();
+const cart = new Set();
 
-    const catalog = document.getElementById("catalog");
-    const search = document.getElementById("search");
-    const categoryFilter = document.getElementById("categoryFilter");
-    const priceFilter = document.getElementById("priceFilter");
-    const sortFilter = document.getElementById("sortFilter");
-    const hoursInput = document.getElementById("hours");
+const equipmentGrid = document.getElementById("equipmentGrid");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const priceFilter = document.getElementById("priceFilter");
+const sortFilter = document.getElementById("sortFilter");
+const rentalHours = document.getElementById("rentalHours");
 
-    function money(amount) {
-      return "$" + amount.toFixed(2);
+function formatPrice(amount) {
+    return "$" + amount.toFixed(2);
+}
+
+function getRentalHours() {
+    const value = Number(rentalHours.value);
+
+    if (!Number.isFinite(value)) return 1;
+
+    return Math.max(1, Math.min(720, Math.floor(value)));
+}
+
+function calculateCost(item, hours) {
+    const fullDays = Math.floor(hours / 8);
+    const remainingHours = hours % 8;
+
+    return fullDays * item.day +
+        Math.min(remainingHours * item.hour, item.day);
+}
+
+function renderEquipment() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    const maxPrice = Number(priceFilter.value);
+    const sort = sortFilter.value;
+
+    let filtered = equipment.filter(item => {
+        const text = (
+            item.name + " " +
+            item.category + " " +
+            item.description
+        ).toLowerCase();
+
+        return text.includes(searchTerm) &&
+            (category === "all" || item.category === category) &&
+            item.hour <= maxPrice;
+    });
+
+    if (sort === "low") {
+        filtered.sort((a, b) => a.hour - b.hour);
     }
 
-    function getHours() {
-      const value = Number(hoursInput.value);
-      return Number.isFinite(value)
-        ? Math.max(1, Math.min(720, Math.floor(value)))
-        : 1;
+    if (sort === "high") {
+        filtered.sort((a, b) => b.hour - a.hour);
     }
 
-    function rentalCost(item, hours) {
-      const fullDays = Math.floor(hours / 8);
-      const remaining = hours % 8;
-
-      return fullDays * item.day +
-        Math.min(remaining * item.hour, item.day);
+    if (sort === "name") {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    function renderCatalog() {
-      const query = search.value.trim().toLowerCase();
-      const category = categoryFilter.value;
-      const maxPrice = Number(priceFilter.value);
-      const sort = sortFilter.value;
+    document.getElementById("resultsCount").textContent =
+        filtered.length + " EQUIPMENT ITEMS FOUND";
 
-      let results = equipment.filter(item => {
-        const searchableText =
-          (item.name + " " + item.description + " " + item.category)
-          .toLowerCase();
+    equipmentGrid.innerHTML = "";
 
-        return searchableText.includes(query) &&
-          (category === "All" || item.category === category) &&
-          item.hour <= maxPrice;
-      });
-
-      if (sort === "low") {
-        results.sort((a, b) => a.hour - b.hour);
-      } else if (sort === "high") {
-        results.sort((a, b) => b.hour - a.hour);
-      } else if (sort === "name") {
-        results.sort((a, b) => a.name.localeCompare(b.name));
-      }
-
-      document.getElementById("resultCount").textContent =
-        results.length + " equipment items found";
-
-      catalog.innerHTML = "";
-
-      if (results.length === 0) {
-        catalog.innerHTML =
-          '<p class="empty">No equipment matches your search. Try adjusting your filters.</p>';
+    if (filtered.length === 0) {
+        equipmentGrid.innerHTML = `
+            <div class="no-results">
+                <h3>No equipment found.</h3>
+                <p>Try changing your search or filters.</p>
+            </div>
+        `;
         return;
-      }
+    }
 
-      results.forEach(item => {
+    filtered.forEach(item => {
         const card = document.createElement("article");
         card.className = "equipment-card";
 
         card.innerHTML = `
-          <div class="equipment-image" aria-hidden="true">
-            ${item.image}
-          </div>
-
-          <div class="equipment-info">
-            <div class="category">${item.category}</div>
-            <h3>${item.name}</h3>
-            <p class="description">${item.description}</p>
-
-            <div class="pricing">
-              <div>
-                <span class="price">${money(item.hour)}</span>
-                <small>Per hour</small>
-              </div>
-              <div>
-                <span class="price">${money(item.day)}</span>
-                <small>Per 8-hour day</small>
-              </div>
+            <div class="equipment-category">
+                ${item.category}
             </div>
 
-            <button class="add-button" data-id="${item.id}">
-              ${cart.has(item.id) ? "Added to Rental List ✓" : "Add to Rental List"}
+            <div class="equipment-visual" aria-hidden="true">
+                ${item.icon}
+            </div>
+
+            <h3>${item.name}</h3>
+
+            <p class="equipment-description">
+                ${item.description}
+            </p>
+
+            <div class="rates">
+                <div>
+                    <div class="rate-price">${formatPrice(item.hour)}</div>
+                    <div class="rate-label">Per Hour</div>
+                </div>
+
+                <div>
+                    <div class="rate-price">${formatPrice(item.day)}</div>
+                    <div class="rate-label">8-Hour Day</div>
+                </div>
+            </div>
+
+            <button
+                class="button"
+                data-id="${item.id}"
+                aria-pressed="${cart.has(item.id)}"
+            >
+                ${cart.has(item.id)
+                    ? "Added to Rental List ✓"
+                    : "Add to Rental List"}
             </button>
-          </div>
         `;
 
-        catalog.appendChild(card);
-      });
+        equipmentGrid.appendChild(card);
+    });
+}
+
+function renderCart() {
+    const container = document.getElementById("cartItems");
+    const hours = getRentalHours();
+
+    container.innerHTML = "";
+
+    let total = 0;
+
+    if (cart.size === 0) {
+        container.innerHTML =
+            "<p>No equipment selected yet. Explore the collection above to build your kit.</p>";
     }
 
-    function renderCart() {
-      const container = document.getElementById("cartItems");
-      const hours = getHours();
-
-      container.innerHTML = "";
-
-      let total = 0;
-
-      if (cart.size === 0) {
-        container.innerHTML =
-          "<p>No equipment selected yet. Browse the catalog to add gear.</p>";
-      }
-
-      cart.forEach(id => {
+    cart.forEach(id => {
         const item = equipment.find(gear => gear.id === id);
         if (!item) return;
 
-        const cost = rentalCost(item, hours);
+        const cost = calculateCost(item, hours);
         total += cost;
 
         const row = document.createElement("div");
-        row.className = "cart-row";
+        row.className = "cart-item";
 
         const details = document.createElement("div");
         const name = document.createElement("strong");
-        const price = document.createElement("div");
+        const price = document.createElement("small");
 
         name.textContent = item.name;
-        price.textContent = money(cost) + " for " + hours + " hour(s)";
+        price.textContent =
+            formatPrice(cost) + " for " + hours + " hour(s)";
 
         details.append(name, price);
 
         const remove = document.createElement("button");
         remove.className = "remove-button";
         remove.textContent = "Remove";
+
         remove.addEventListener("click", () => {
-          cart.delete(id);
-          renderCart();
-          renderCatalog();
+            cart.delete(id);
+            renderEquipment();
+            renderCart();
         });
 
         row.append(details, remove);
         container.appendChild(row);
-      });
+    });
 
-      document.getElementById("total").textContent = money(total);
+    document.getElementById("estimateTotal").textContent =
+        formatPrice(total);
+}
+
+equipmentGrid.addEventListener("click", event => {
+    const button = event.target.closest("[data-id]");
+
+    if (!button) return;
+
+    const id = Number(button.dataset.id);
+
+    if (cart.has(id)) {
+        cart.delete(id);
+    } else {
+        cart.add(id);
     }
 
-    catalog.addEventListener("click", event => {
-      const button = event.target.closest("[data-id]");
-      if (!button) return;
+    renderEquipment();
+    renderCart();
+});
 
-      const id = Number(button.dataset.id);
+[searchInput, categoryFilter, priceFilter, sortFilter].forEach(control => {
+    control.addEventListener("input", renderEquipment);
+});
 
-      if (cart.has(id)) {
-        cart.delete(id);
-      } else {
-        cart.add(id);
-      }
+rentalHours.addEventListener("change", () => {
+    rentalHours.value = getRentalHours();
+    renderCart();
+});
 
-      renderCatalog();
-      renderCart();
-    });
-
-    [search, categoryFilter, priceFilter, sortFilter].forEach(control => {
-      control.addEventListener("input", renderCatalog);
-    });
-
-    hoursInput.addEventListener("change", () => {
-      hoursInput.value = getHours();
-      renderCart();
-    });
-
-    document.getElementById("copyEstimate").addEventListener("click", async () => {
-      if (cart.size === 0) {
+document.getElementById("copyEstimate").addEventListener("click", async () => {
+    if (cart.size === 0) {
         alert("Please add equipment to your rental list first.");
         return;
-      }
+    }
 
-      const hours = getHours();
-      let total = 0;
+    const hours = getRentalHours();
+    let total = 0;
 
-      const lines = ["Sage & Frame Studio - Rental Estimate", ""];
+    const lines = [
+        "SAGE & FRAME STUDIO",
+        "Equipment Rental Estimate",
+        ""
+    ];
 
-      cart.forEach(id => {
+    cart.forEach(id => {
         const item = equipment.find(gear => gear.id === id);
-        const cost = rentalCost(item, hours);
+        const cost = calculateCost(item, hours);
 
         total += cost;
-        lines.push(item.name + ": " + money(cost));
-      });
 
-      lines.push("");
-      lines.push("Duration: " + hours + " hours");
-      lines.push("Estimated total: " + money(total));
-      lines.push("Fictional educational estimate; not a booking.");
-
-      const text = lines.join("\n");
-
-      try {
-        await navigator.clipboard.writeText(text);
-        alert("Rental estimate copied!");
-      } catch (error) {
-        alert("Copy unavailable in this browser. Please try another browser.");
-      }
+        lines.push(item.name + ": " + formatPrice(cost));
     });
 
-    renderCatalog();
-    renderCart();
-  </script>
+    lines.push("");
+    lines.push("Rental duration: " + hours + " hours");
+    lines.push("Estimated total: " + formatPrice(total));
+    lines.push("Fictional educational estimate; not a reservation.");
+
+    try {
+        await navigator.clipboard.writeText(lines.join("\n"));
+        alert("Your rental estimate has been copied!");
+    } catch (error) {
+        alert("Unable to copy automatically. Please try another browser.");
+    }
+});
+
+renderEquipment();
+renderCart();
+</script>
 
 </body>
 </html>
