@@ -240,13 +240,23 @@ main {
     font-size: 11px;
 }
 
+/* UPDATED: REAL IMAGE DISPLAY */
+
 .equipment-visual {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 115px;
+    height: 190px;
     margin: 12px 0;
-    font-size: 58px;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.equipment-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .equipment-card h3 {
@@ -732,7 +742,7 @@ const equipment = [
         category: "Cameras",
         hour: 20,
         day: 110,
-        icon: "📷",
+        image: "images/equipment/sony-fx3.jpg",
         description: "Compact full-frame cinema camera for weddings, documentaries, and commercial productions."
     },
     {
@@ -741,7 +751,7 @@ const equipment = [
         category: "Cameras",
         hour: 35,
         day: 200,
-        icon: "🎥",
+        image: "images/equipment/sony-fx6.jpg",
         description: "Professional cinema camera with advanced recording capabilities and flexible production controls."
     },
     {
@@ -750,7 +760,7 @@ const equipment = [
         category: "Cameras",
         hour: 25,
         day: 145,
-        icon: "📹",
+        image: "images/equipment/canon-c70.jpg",
         description: "Versatile cinema camera designed for interviews, independent films, and branded content."
     },
     {
@@ -759,7 +769,7 @@ const equipment = [
         category: "Audio",
         hour: 5,
         day: 25,
-        icon: "🎙️",
+        image: "images/equipment/zoom-h4n-pro.jpg",
         description: "Portable multitrack recorder for interviews, field recording, and location sound."
     },
     {
@@ -768,7 +778,7 @@ const equipment = [
         category: "Audio",
         hour: 6,
         day: 35,
-        icon: "🎤",
+        image: "images/equipment/sennheiser-shotgun-microphone.jpg",
         description: "Directional microphone for capturing dialogue and detailed production audio."
     },
     {
@@ -777,7 +787,7 @@ const equipment = [
         category: "Audio",
         hour: 9,
         day: 50,
-        icon: "🎙️",
+        image: "images/equipment/boom-pole-kit.jpg",
         description: "Boom pole and shotgun microphone setup for professional dialogue recording."
     },
     {
@@ -786,7 +796,7 @@ const equipment = [
         category: "Audio",
         hour: 8,
         day: 45,
-        icon: "🎤",
+        image: "images/equipment/wireless-lavalier-kit.jpg",
         description: "Wireless microphone system for interviews, presentations, and documentary filmmaking."
     },
     {
@@ -795,7 +805,7 @@ const equipment = [
         category: "Lighting",
         hour: 12,
         day: 65,
-        icon: "💡",
+        image: "images/equipment/aputure-300d-ii.jpg",
         description: "Powerful daylight LED lighting solution for cinematic and commercial productions."
     },
     {
@@ -804,7 +814,7 @@ const equipment = [
         category: "Lighting",
         hour: 8,
         day: 45,
-        icon: "🔆",
+        image: "images/equipment/led-panel-kit.jpg",
         description: "Adjustable LED lighting for interviews, product videos, and smaller production sets."
     },
     {
@@ -813,7 +823,7 @@ const equipment = [
         category: "Lighting",
         hour: 18,
         day: 100,
-        icon: "💡",
+        image: "images/equipment/three-point-lighting-kit.jpg",
         description: "Complete key, fill, and backlighting arrangement for professional video productions."
     },
     {
@@ -822,7 +832,7 @@ const equipment = [
         category: "Accessories",
         hour: 9,
         day: 45,
-        icon: "🎥",
+        image: "images/equipment/dji-rs3-pro.jpg",
         description: "Professional camera stabilizer for smooth tracking shots and dynamic movement."
     },
     {
@@ -831,7 +841,7 @@ const equipment = [
         category: "Accessories",
         hour: 5,
         day: 25,
-        icon: "📷",
+        image: "images/equipment/video-tripod.jpg",
         description: "Stable video tripod with fluid head for smooth pans and controlled camera movement."
     },
     {
@@ -840,7 +850,7 @@ const equipment = [
         category: "Accessories",
         hour: 6,
         day: 30,
-        icon: "🖥️",
+        image: "images/equipment/camera-field-monitor.jpg",
         description: "External monitor for accurate framing, exposure, and on-set viewing."
     },
     {
@@ -849,7 +859,7 @@ const equipment = [
         category: "Accessories",
         hour: 15,
         day: 85,
-        icon: "📷",
+        image: "images/equipment/cinema-lens-kit.jpg",
         description: "Versatile lens collection for creative compositions, portraits, and cinematic storytelling."
     }
 ];
@@ -937,8 +947,12 @@ function renderEquipment() {
                 ${item.category}
             </div>
 
-            <div class="equipment-visual" aria-hidden="true">
-                ${item.icon}
+            <div class="equipment-visual">
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                    loading="lazy"
+                >
             </div>
 
             <h3>${item.name}</h3>
