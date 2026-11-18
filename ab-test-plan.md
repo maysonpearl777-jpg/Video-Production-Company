@@ -21,10 +21,9 @@ Review the wedding videography packages on the following website:
 [INSERT WEBSITE LINK]
 Decide whether you would purchase The Story package at its advertised price.
 
-Consider the package's price, included services, your wedding budget, and whether the package provides sufficient value compared with other options.
+Consider the package's price, included services and your wedding budget.
 
-Answer only Yes or No, followed by one sentence explaining your decision. Do not assume you can afford the package simply because it is available.
-
+Answer only Yes or No, followed by one sentence explaining your decision. 
 
 Assignment: I will list 50 A trials and 50 B trials, then I will use rand() generator to sort the trials into a random sequence, so there will be an even 50 A trials and 50 B trials but they are conducted in a random order.
 
