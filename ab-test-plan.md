@@ -3,9 +3,9 @@ A/B Test Plan - Sage & Frame Studio Digital Marketing
 Page: Wedding Videography
 Element Changed: $400 discount on wedding 2 package. 
 
-Version A (Control group): The original wedding videography package, with The Story package is offered at $2,600, which includes: eight hours of coverage, two filmmakers, professional audio, full ceremony coverage, and 6-8 minute cinematic film.
+Version A (Control group): The original wedding videography package, with The Story package is offered at $4,000, which includes: eight hours of coverage, two filmmakers, professional audio, full ceremony coverage, and 6-8 minute cinematic film.
 
-Version B (Treatment group): Features the same wedding videography page, but lists the Story package at $2,200 striking $2,600, which will show a seasonal $400 discount for winter weddings with the time-frame being in December through February. All other content on the page will remain the same. 
+Version B (Treatment group): Features the same wedding videography page, but lists the Story package at $3,600 striking $4,000, which will show a seasonal $400 discount for winter weddings with the time-frame being in December through February. All other content on the page will remain the same. 
 
 Hypothesis: Version B will have a higher percentage of people who will purchase the story package compared to Version A. I think this because with a lower deal, people will be more prone to purchasing the second most expensive package due to scarcity bias and couples who want a winter wedding will find the discount to be more affordable. 
 
