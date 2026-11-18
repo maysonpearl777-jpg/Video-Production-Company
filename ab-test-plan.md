@@ -15,7 +15,7 @@ Target Audience: Engaged people in the Midwest who are planning a winter wedding
 
 Exact Prompt: You are an engaged person in the Midwest looking for winter wedding videography/photography services. Read the product listing for videography packages and decide whether you would purchase the story package. Answer yes or no, then give me one sentence of why you made your decision. 
 
-Assignment: I will use a random number generator in excel with 2 possible results #1 and #2. If given a #1 I will provide version A, if given #2 I will provide version B
+Assignment: I will list 50 A trials and 50 B trials, then I will use rand() generator to sort the trials into a random sequence, so there will be an even 50 A trials and 50 B trials but they are conducted in a random order.
 
 Primary Outcome: The primary outcome will be the percentage of AI visitors who indicate willingness to purchase the story wedding videography package. Yes = 1: The AI visitor chose to buy the package, and anything other than yes = 0: any response that is not a definite yes (no, maybe, something unexpected).
 
