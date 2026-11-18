@@ -188,15 +188,20 @@ main {
     color: var(--evergreen);
 }
 
-.package:nth-child(3) .buy-button {
-    background: var(--cream);
-    color: var(--evergreen);
-    border-color: var(--cream);
-}
-
-.package:nth-child(3) .buy-button:hover {
-    background: transparent;
+.buy-button {
+    display: block;
+    margin-top: auto;
+    padding: 14px 20px;
+    background: var(--evergreen);
     color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid var(--evergreen);
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .checkout-note {
