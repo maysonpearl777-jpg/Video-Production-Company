@@ -15,7 +15,7 @@ Target Audience: Engaged people in the Midwest who are planning a winter wedding
 
 Exact Prompt: AI Prompt:
 
-You are an engaged person in the Midwest planning a winter wedding. You are comparing wedding videography packages from several companies and have a limited wedding budget.
+You are an engaged person in the Midwest planning a winter wedding. You are comparing wedding videography packages from several companies and have a wedding budget.
 Review the wedding videography packages on the following website:
 
 [INSERT WEBSITE LINK]
