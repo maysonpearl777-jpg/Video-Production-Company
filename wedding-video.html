@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -132,6 +133,8 @@ main {
 .package {
     padding: 45px 35px;
     min-height: 430px;
+    display: flex;
+    flex-direction: column;
 }
 
 .package:nth-child(1) {
@@ -159,6 +162,49 @@ main {
 
 .package ul {
     padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* BUY NOW BUTTONS */
+
+.buy-button {
+    display: block;
+    margin-top: auto;
+    padding: 14px 20px;
+    background: var(--evergreen);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid var(--evergreen);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.buy-button:hover {
+    background: transparent;
+    color: var(--evergreen);
+}
+
+.package:nth-child(3) .buy-button {
+    background: var(--cream);
+    color: var(--evergreen);
+    border-color: var(--cream);
+}
+
+.package:nth-child(3) .buy-button:hover {
+    background: transparent;
+    color: white;
+}
+
+.checkout-note {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.5;
+    opacity: 0.85;
 }
 
 .style-section {
@@ -346,6 +392,8 @@ who want to coordinate additional photography and video services.
 
 <section class="packages">
 
+<!-- PACKAGE 01 -->
+
 <div class="package">
 
 <div class="eyebrow">Package 01</div>
@@ -362,7 +410,18 @@ who want to coordinate additional photography and video services.
 <li>Digital delivery</li>
 </ul>
 
+<a class="buy-button"
+href="checkout.html?package=classic&amp;version=A">
+Buy Now
+</a>
+
+<div class="checkout-note">
+Demo checkout · No real payments
 </div>
+
+</div>
+
+<!-- PACKAGE 02 - CONTROL GROUP -->
 
 <div class="package">
 
@@ -380,7 +439,18 @@ who want to coordinate additional photography and video services.
 <li>6–8 minute cinematic film</li>
 </ul>
 
+<a class="buy-button"
+href="checkout.html?package=story&amp;version=A">
+Buy Now
+</a>
+
+<div class="checkout-note">
+Demo checkout · No real payments
 </div>
+
+</div>
+
+<!-- PACKAGE 03 -->
 
 <div class="package">
 
@@ -398,6 +468,15 @@ who want to coordinate additional photography and video services.
 <li>Drone footage when possible</li>
 <li>10–12 minute feature film</li>
 </ul>
+
+<a class="buy-button"
+href="checkout.html?package=full-feature&amp;version=A">
+Buy Now
+</a>
+
+<div class="checkout-note">
+Demo checkout · No real payments
+</div>
 
 </div>
 
