@@ -13,7 +13,18 @@ Model: ChatGPT Codex GPT-6
 
 Target Audience: Engaged people in the Midwest who are planning a winter wedding. 
 
-Exact Prompt: You are an engaged person in the Midwest looking for winter wedding videography/photography services. Read the product listing for videography packages and decide whether you would purchase the story package. Answer yes or no, then give me one sentence of why you made your decision. 
+Exact Prompt: AI Prompt:
+
+You are an engaged person in the Midwest planning a winter wedding. You are comparing wedding videography packages from several companies and have a limited wedding budget.
+Review the wedding videography packages on the following website:
+
+[INSERT WEBSITE LINK]
+Decide whether you would purchase The Story package at its advertised price.
+
+Consider the package's price, included services, your wedding budget, and whether the package provides sufficient value compared with other options.
+
+Answer only Yes or No, followed by one sentence explaining your decision. Do not assume you can afford the package simply because it is available.
+
 
 Assignment: I will list 50 A trials and 50 B trials, then I will use rand() generator to sort the trials into a random sequence, so there will be an even 50 A trials and 50 B trials but they are conducted in a random order.
 
