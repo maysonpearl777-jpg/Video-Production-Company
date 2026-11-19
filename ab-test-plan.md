@@ -27,7 +27,7 @@ Answer only Yes or No, followed by one sentence explaining your decision.
 
 Assignment: I will list 50 A trials and 50 B trials, then I will use rand() generator to sort the trials into a random sequence, so there will be an even 50 A trials and 50 B trials but they are conducted in a random order.
 
-Primary Outcome: The primary outcome will be the percentage of AI visitors who indicate willingness to purchase the story wedding videography package. Yes = 1: The AI visitor chose to buy the package, and anything other than yes = 0: any response that is not a definite yes (no, maybe, something unexpected).
+Primary Outcome: The primary outcome will be the percentage of AI visitors who indicate willingness to purchase the story wedding videography package. Yes = 1: The AI visitor chose to buy the package, and anything other than yes = 0: any response that is not a definite yes (no, maybe, something unexpected). The significance level I will use will be alpha = 0.05. Anything calculated as 0.05 or lower will be considered signiciant, and anything higher than 0.05 will be considered not significant. 
 
 Sample Size & Timeline:
 I will include 100 AI visitor trials, with 50 trials per version.
